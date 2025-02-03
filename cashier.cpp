@@ -6,7 +6,6 @@
 * Serendipity application.
 **********************************************************/
 
-#include <vector>
 #include <string>
 #include <iomanip>
 #include <iostream>
