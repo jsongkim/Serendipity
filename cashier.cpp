@@ -1,10 +1,10 @@
-/**********************************************************
+/*
 * Author: Joseph Song-Kim
 * Assignment: G2
 * Due Date: 2/4/2025
 * Purpose: Cashier/receipt printing program meant for the 
 * Serendipity application.
-**********************************************************/
+*/
 
 #include <string>
 #include <iomanip>
@@ -83,3 +83,10 @@ int main() {
 	} while (choice == 'Y');
 	return 0;
 }
+
+/*
+* Notes for improvements:
+* Implement check for valid date format.
+* Implement check for quantities greater than 999.
+* Increasing ISBN, Price, Total columns width.
+*/
