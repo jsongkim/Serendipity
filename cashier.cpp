@@ -9,6 +9,7 @@
 #include <string>
 #include <iomanip>
 #include <iostream>
+// Added namespace halfway through the project, so many of the declarations/function calls still have the std:: option attached.
 using namespace std;
 
 int main() {
