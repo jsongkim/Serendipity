@@ -4,7 +4,7 @@
 //* Due Date: 02/04/2025                        *
 //* Purpose: The main menu selection of the     *
 //*          Serendipity project.               *
-//***********************************************
+//***********************************************/
 #include <iostream> 
 #include <iomanip>
 using namespace std;
