@@ -25,7 +25,7 @@ int main(){
      cout << "\n" << setw(39) << "Enter Your Choice:";
 
      do{
-         //Asks for user input as well ass validates the input and pauses the terminal
+         //Asks for user input as well as validates the input and pauses the terminal
          cin >> choice;        //input prompt
 
          switch (choice){
