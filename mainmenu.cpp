@@ -21,10 +21,10 @@ cout << left << setw(40) << "Enter your choice: ";
 cin >> Choice;
 
 // User input validation
-  if (Choice > 4) {
-  cout << setw(51) << "Please enter a number from 1-4" << endl;
-  cin >> Choice;
-  }
+  //if (Choice > 4) {
+  //cout << setw(51) << "Please enter a number from 1-4" << endl;
+  //cin >> Choice;
+  //}
 
 // Prompt showing what user selected
     switch (Choice) {
@@ -41,7 +41,10 @@ cin >> Choice;
         cout << setw(41) << "You selected item: 4" << "\n" << setw(38) << "Goodbye!" << endl;
         break;
       default:
-        cout << "Invalid input. Please enter a number from 1-4" << endl;
+        cout << "/n" << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;
+        cout << setw(47) << "Press ENTER to continue..." << endl;
+        cin.ignore(80, '\n');
+        cin.get();
     }
   }while (Choice != 4)
 return 0;
