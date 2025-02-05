@@ -28,7 +28,7 @@ int main(){
          //Asks for user input as well ass validates the input and pauses the terminal
          cin >> choice;        //input prompt
 
-         swtich (choice){
+         switch (choice){
          case '1':
             cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
             break;
