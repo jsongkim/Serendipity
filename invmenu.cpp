@@ -38,7 +38,7 @@ int main(){
          case '3':
             cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
             break;
-         case '4';
+         case '4':
             cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
             break;
          case '5':
