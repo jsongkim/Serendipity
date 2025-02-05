@@ -22,7 +22,7 @@ cin >> Choice;
 }
 
 // Prompt showing what user selected
-  switch (choice) {
+  switch (Choice) {
     case 1:
       cout << "You selected item: 1" << endl;
       break;
