@@ -41,7 +41,7 @@ int main(){
          case '4':
             cout << "\n" << setw(41) << "You selected item: 4" << "\n" << endl;
             break;
-         case '5':
+         case '5';
             cout << "\n" << setw(41) << "You selected item: 5" << "\n" << endl;
             break;
          default:
