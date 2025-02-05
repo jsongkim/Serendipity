@@ -19,9 +19,9 @@ int main(){
      cout << setw(43) << "Inventory Database" << endl;
      cout << "\n" << setw(38) << "1. Look Up a Book" << endl;
      cout << setw(34) << "2. Add a Book" << endl;
-     cout << setw(44) << "3. Add a Book" << endl;
-     cout << setw(37) << "4. Add a Book" << endl;
-     cout << setw(47) << "5. Add a Book" << endl;
+     cout << setw(44) << "3. Edit a Book's Record" << endl;
+     cout << setw(37) << "4. Delete a Book" << endl;
+     cout << setw(47) << "5. Return to the Main Menu" << endl;
      cout << "\n" << setw(39) << "Enter Your Choice:";
 
      do{
@@ -36,13 +36,13 @@ int main(){
             cout << "\n" << setw(41) << "You selected item: 2" << "\n" << endl;
             break;
          case '3':
-            cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 3" << "\n" << endl;
             break;
          case '4':
-            cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 4" << "\n" << endl;
             break;
          case '5':
-            cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 5" << "\n" << endl;
             break;
          default:
             cout << "\n" << setw(60) << "Please enter a number in the range 1-5." << "\n" << endl;    //input validation
