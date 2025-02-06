@@ -15,16 +15,11 @@ int Choice;  // INPUT : User's choice
 
 // Create while loop menu until 4/Exit is chosen
 do{
+cout << "\033[2J\033[1;1H";
 cout << left << setw(46) << "Serendipity Booksellers" << "\n" << setw(39) << "Main Menu" << endl;
 cout << left << setw(38) << "1. Cashier Module" << "\n" << setw(49) << "2. Inventory Database Module" << "\n" << setw(38) << "3. Reports Module" << "\n" << setw(28) << "4. Exit" << endl;
 cout << left << setw(40) << "Enter your choice: ";
 cin >> Choice;
-
-// User input validation
-  //if (Choice > 4) {
-  //cout << setw(51) << "Please enter a number from 1-4" << endl;
-  //cin >> Choice;
-  //}
 
 // Prompt showing what user selected
     switch (Choice) {
@@ -38,14 +33,15 @@ cin >> Choice;
         cout << "\n" << setw(41) << "You selected item: 3" << endl;
         break;
       case 4: 
-        cout << "\n" << setw(41) << "You selected item: 4" << "\n" << setw(38) << "Goodbye!" << endl;
+        cout << "\n" << setw(41) << "You selected item: 4" << endl;
         break;
       default:
-        cout << "/n" << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;
-        cout << setw(47) << "Press ENTER to continue..." << endl;
-        cin.ignore(80, '\n');
-        cin.get();
-    }
+        cout << "/n" << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
+      }
+      cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
+  
   }while (Choice != 4)
 return 0;
 
