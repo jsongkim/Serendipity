@@ -36,7 +36,7 @@ cin >> Choice;
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
         break;
       default:
-        cout << "/n" << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
+        cout << "\n" << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
       }
       cout << setw(47) << "Press ENTER to continue..." << endl;
       cin.ignore(80, '\n');
