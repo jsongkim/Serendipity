@@ -22,7 +22,7 @@ int main() {
   cin >> Choice;
 
   //Repeat menu until user has chosen to exit the program.
-  while (Choice < 7) {
+  while (Choice != 7) {
       cout << setw(30) << left << "Serendipity Booksellers\n Reports" << endl;
       cout << setw(20) << left << "1. Inventory Listing\n 2. Inventory Wholesale Value\n 3. Inventory Retail Value\n 4. Listing by Quantity\n 5. Listing by Cost\n 6. Listing by Age\n 7. Return to Main Menu" << endl;
       cout << setw(30) << left << "Enter Your Choice : " << Choice << endl;
