@@ -23,16 +23,16 @@ cin >> Choice;
 
 // Prompt showing what user selected
     switch (Choice) {
-      case 1:
+      case '1':
         cout << "\n" << setw(41) << "You selected item: 1" << endl;
         break;
-      case 2: 
+      case '2': 
         cout << "\n" << setw(41) << "You selected item: 2" << endl;
         break;
-      case 3:
+      case '3':
         cout << "\n" << setw(41) << "You selected item: 3" << endl;
         break;
-      case 4: 
+      case '4': 
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
         break;
       default:
@@ -42,7 +42,7 @@ cin >> Choice;
       cin.ignore(80, '\n');
       cin.get();
   
-  }while (Choice != 4)
+  }while (Choice != 4);
 return 0;
 
 }
