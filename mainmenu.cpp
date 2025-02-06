@@ -36,11 +36,15 @@ cin >> Choice;
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
         break;
       default:
+        cin.clear();
+        cin.ignore();
         cout << "\n" << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
+        cin >> Choice;
       }
       cout << setw(47) << "Press ENTER to continue..." << endl;
       cin.ignore(80, '\n');
       cin.get();
+      
   
   }while (Choice != 4);
 return 0;
