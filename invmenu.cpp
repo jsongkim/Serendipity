@@ -14,6 +14,8 @@ int main(){
   char choice;        //holds a char for easier input validation
 
   do{
+    cout << "\033[2J\033[1;1H";
+    
      //hardcoded menu
      cout << setw(46) << "Serendipity Booksellers" << endl;
      cout << setw(43) << "Inventory Database" << endl;
@@ -24,7 +26,6 @@ int main(){
      cout << setw(47) << "5. Return to the Main Menu" << endl;
      cout << "\n" << setw(39) << "Enter Your Choice:";
 
-     do{
          //Asks for user input as well as validates the input and pauses the terminal
          cin >> choice;        //input prompt
 
@@ -47,7 +48,9 @@ int main(){
          default:
             cout << "\n" << setw(60) << "Please enter a number in the range 1-5." << "\n" << endl;    //input validation
           }
-     }while(choice == '\n');      //pauses the terminal
+     cout << setw(47) << "Press ENTER to continue..." << endl;
+     cin.ignore(80, '\n');       //pauses the terminal
+     cin.get(); 
 
   }while(!(choice == '5'));       //exits inventory menu
 
