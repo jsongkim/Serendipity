@@ -52,9 +52,11 @@ int main() {
       cin.ignore(80, '\n');
       cin.get();
       cin >> Choice;
-       cout << setw(47) << "Press ENTER to continue..." << endl;
-    
   }
+      cout << setw(47) << "Press ENTER to continue..." << endl;
+     cin.ignore(80, '\n');
+      cin.get();
+    
 while (Choice != 7);
 
 return 0;
