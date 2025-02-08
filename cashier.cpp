@@ -11,7 +11,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+void cashier() {
 	// Variable declaration. Sets choice to 'Y' by default to facilitate loop.
 	std::string date;
 	int qty;
@@ -28,6 +28,7 @@ int main() {
 	<< "Serendipity Booksellers          \n"
 	<< "Cashier Module                   \n\n"
 	<< "Date: ";
+	std::cin.ignore();
 	std::getline(std::cin, date);
 
 	// Asks for quantity. If statement checks for valid input data type.
@@ -104,5 +105,5 @@ int main() {
 		} while (choice != 'Y' && choice != 'N');
 	}
 	} while (choice == 'Y');
-	return 0;
+	return;
 }
