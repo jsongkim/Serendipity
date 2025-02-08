@@ -57,7 +57,7 @@ int main() {
      cin.ignore(80, '\n');
       cin.get();
     
-while (Choice != 7);
+  }while (Choice != 7);
 
 return 0;
 
