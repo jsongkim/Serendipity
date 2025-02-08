@@ -23,22 +23,22 @@ cin >> Choice;
 
 // Prompt showing what user selected
     switch (Choice) {
-      case 1:
+      case '1':
         cout << "\n" << setw(41) << "You selected item: 1" << endl;
         break;
-      case 2: 
+      case '2': 
         cout << "\n" << setw(41) << "You selected item: 2" << endl;
         break;
-      case 3:
+      case '3':
         cout << "\n" << setw(41) << "You selected item: 3" << endl;
         break;
-      case 4: 
+      case '4': 
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
         break;
       default:
         cin.clear();
         cin.ignore();
-        cout << << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
+        cout << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
         cin >> Choice;
       }
       cout << setw(47) << "Press ENTER to continue..." << endl;
