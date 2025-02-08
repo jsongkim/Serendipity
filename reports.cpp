@@ -12,7 +12,7 @@ using namespace std;
 int main() {
 
   //Data Dictionary
-  int Choice;            //INPUT : User's chosen menu option
+  char Choice;            //INPUT : User's chosen menu option
 
   //Repeat menu until user has chosen to exit the program.
   do {
@@ -26,25 +26,25 @@ int main() {
 
   //Input Validation
   switch (Choice) {
-    case 1:
+    case '1':
       cout << setw(40) << " You have selected item 1. " << endl;
       break;
-    case 2:
+    case '2':
       cout << setw(40) << " You have selected item 2. " << endl;
       break;
-    case 3: 
+    case '3': 
       cout << setw(40) << " You have selected item 3. " << endl;
       break;
-    case 4:
+    case '4':
       cout << setw(40) << " You have selected item 4. " << endl;
       break;
-    case 5:
+    case '5':
       cout << setw(40) << " You have selected item 5. " << endl;
       break;
-    case 6:
+    case '6':
       cout << setw(40) <<  " You have selected item 6. " << endl;
       break;
-    case 7:
+    case '7':
       cout << setw(40) << " You have selected item 7. Goodbye! " << endl;
       break;
     default:
@@ -57,7 +57,7 @@ int main() {
      cin.ignore(80, '\n');
       cin.get();
     
-  }while (Choice != 7);
+  }while (Choice != '7');
 
 return 0;
 
