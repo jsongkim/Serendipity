@@ -14,13 +14,6 @@ int main() {
   //Data Dictionary
   int Choice;            //INPUT : User's chosen menu option
 
-//Prompt Menu Selection
-  cout << setw(30) << left << "Serendipity Booksellers\n Reports" << endl;
-  cout << setw(20) << left << "1. Inventory Listing\n 2. Inventory Wholesale Value\n 3. Inventory Retail Value\n 4. Listing by Quantity\n 5. Listing by Cost\n 6. Listing by Age\n 7. Return to Main Menu" << endl;
-  cout << setw(30) << left << "Enter Your Choice : " << endl;
-  cout << setw(30) << left << "Please enter a number from 1 - 7!" << endl;
-  cin >> Choice;
-
   //Repeat menu until user has chosen to exit the program.
   do {
     cout << "\033[2J\033[1;1H";
@@ -56,9 +49,11 @@ int main() {
       break;
     default:
       cout << setw(40) << " Invalid Input! Please enter a number from 1-7!" << endl;
+      cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       cin >> Choice;
-
-      getline.clear
+    
   }
 while (Choice != 7);
 
