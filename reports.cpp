@@ -12,20 +12,20 @@ using namespace std;
 void reports() {
 
   //Data Dictionary
-  char Choice;            //INPUT : User's chosen menu option
+  char rChoice;            //INPUT : User's chosen menu option
 
   //Repeat menu until user has chosen to exit the program.
   do {
     cout << "\033[2J\033[1;1H";
       cout << setw(30) << left << "Serendipity Booksellers\n Reports" << endl;
       cout << setw(20) << left << "1. Inventory Listing\n2. Inventory Wholesale Value\n3. Inventory Retail Value\n4. Listing by Quantity\n5. Listing by Cost\n6. Listing by Age\n7. Return to Main Menu" << endl;
-      cout << setw(30) << left << "Enter Your Choice : " << Choice << endl;
+      cout << setw(30) << left << "Enter Your Choice : " << rChoice << endl;
       cout << setw(30) << left << "Please enter a number from 1 - 7!" << endl;
-      cin >> Choice;
+      cin >> rChoice;
     
 
   //Input Validation
-  switch (Choice) {
+  switch (rChoice) {
     case '1':
       cout << setw(40) << " You have selected item 1. " << endl;
       break;
@@ -48,17 +48,17 @@ void reports() {
       cout << setw(40) << " You have selected item 7. Goodbye! " << endl;
       break;
     default:
-      cout << setw(40) << "'" << Choice << "'" << "is invalid. Please enter a number from 1 - 7!"  << endl;
+      cout << setw(40) << "'" << rChoice << "'" << "is invalid. Please enter a number from 1 - 7!"  << endl;
       cin.ignore(80, '\n');
       cin.get();
-      cin >> Choice;
+      cin >> rChoice;
   }
       cout << setw(47) << "Press ENTER to continue..." << endl;
      cin.ignore(80, '\n');
       cin.get();
     
-  }while (Choice != '7');
+  }while (rChoice != '7');
 
-return 0;
+return;
 
 }
