@@ -8,6 +8,7 @@
 #include <iostream> 
 #include <iomanip>
 #include "cashier.h"
+#include "invmenu.h"
 using namespace std;
 
 int main() {
@@ -26,27 +27,33 @@ cin >> Choice;
     switch (Choice) {
       case '1':
         cout << "\n" << setw(41) << "You selected item: 1" << endl;
-		  cashier();
+	cout << setw(47) << "Press ENTER to continue..." << endl;
+	cin.ignore();
+	cin.get();
+		cashier();
         break;
       case '2': 
         cout << "\n" << setw(41) << "You selected item: 2" << endl;
+	cout << setw(47) << "Press ENTER to continue..." << endl;
+	cin.ignore();
+	cin.get();
+		invmenu();
         break;
       case '3':
         cout << "\n" << setw(41) << "You selected item: 3" << endl;
+	cout << setw(47) << "Press ENTER to continue..." << endl;
+	cin.ignore();
+	cin.get();
         break;
       case '4': 
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
+	cout << setw(47) << "Press ENTER to continue..." << endl;
+	cin.ignore();
+	cin.get();
         break;
       default:
-		  do{
          cout << "'" << Choice << "'" << "is invalid input. Please enter your choice again.";   
-         cin >> Choice;
-		  }while (Choice != '1' && Choice != '2' && Choice != '3' && Choice != '4');
-        cout << "\n" << setw(41) << "You selected item: " << Choice << endl;
-      }
-      cout << setw(47) << "Press ENTER to continue..." << endl;
-		cin.ignore();
-		cin.get();
+     }
 
   }while (Choice != '4');
 return 0;
