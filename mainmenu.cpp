@@ -46,7 +46,7 @@ cin >> Choice;
       cin.get();
       
   
-  }while (Choice != 4);
+  }while (Choice != '4');
 return 0;
 
 }
