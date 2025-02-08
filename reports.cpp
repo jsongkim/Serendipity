@@ -9,7 +9,7 @@
 #include <iomanip>
 using namespace std;
 
-int main() {
+void reports() {
 
   //Data Dictionary
   char Choice;            //INPUT : User's chosen menu option
