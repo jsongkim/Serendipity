@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
   // Data Dictionary
-int Choice;  // INPUT : User's choice
+char Choice;  // INPUT : User's choice
 
 // Create while loop menu until 4/Exit is chosen
 do{
@@ -36,16 +36,20 @@ cin >> Choice;
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
         break;
       default:
-        cout << setw(22) << "'" << Choice << "'" << "is invalid input" << endl;   
-        cin.clear();
+		  do{
+		  	cin.clear();
         cin.ignore();
+        cout << "'" << Choice << "'" << "is invalid input. Please enter your choice again.";   
         cin >> Choice;
+		  }while (Choice != '1' && Choice != '2' && Choice != '3' && Choice != '4');
+        cout << "\n" << setw(41) << "You selected item: " << Choice << endl;
+
       }
       cout << setw(47) << "Press ENTER to continue..." << endl;
       cin.ignore(80, '\n');
       cin.get();
-      
-  
+
+
   }while (Choice != '4');
 return 0;
 
