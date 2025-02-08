@@ -7,6 +7,7 @@
 //***********************************************/
 #include <iostream> 
 #include <iomanip>
+#include "cashier.h"
 using namespace std;
 
 int main() {
@@ -25,6 +26,7 @@ cin >> Choice;
     switch (Choice) {
       case '1':
         cout << "\n" << setw(41) << "You selected item: 1" << endl;
+		  cashier();
         break;
       case '2': 
         cout << "\n" << setw(41) << "You selected item: 2" << endl;
@@ -37,18 +39,14 @@ cin >> Choice;
         break;
       default:
 		  do{
-		  	cin.clear();
-        cin.ignore();
-        cout << "'" << Choice << "'" << "is invalid input. Please enter your choice again.";   
-        cin >> Choice;
+         cout << "'" << Choice << "'" << "is invalid input. Please enter your choice again.";   
+         cin >> Choice;
 		  }while (Choice != '1' && Choice != '2' && Choice != '3' && Choice != '4');
         cout << "\n" << setw(41) << "You selected item: " << Choice << endl;
-
       }
       cout << setw(47) << "Press ENTER to continue..." << endl;
-      cin.ignore(80, '\n');
-      cin.get();
-
+		cin.ignore();
+		cin.get();
 
   }while (Choice != '4');
 return 0;
