@@ -9,7 +9,8 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+void invmenu()
+{  
   
   char choice;        //holds a char for easier input validation
 
@@ -48,11 +49,12 @@ int main(){
          default:
             cout << "\n" << setw(60) << "Please enter a number in the range 1-5." << "\n" << endl;    //input validation
           }
-     cout << setw(47) << "Press ENTER to continue..." << endl;
-     cin.ignore(80, '\n');       //pauses the terminal
-     cin.get(); 
+    
+          cout << setw(47) << "Press ENTER to continue..." << endl;
+          cin.ignore(80, '\n');       //pauses the terminal
+          cin.get(); 
 
   }while(!(choice == '5'));       //exits inventory menu
 
-  return 0;
+  return;
 }
