@@ -48,11 +48,11 @@ int main() {
       cout << setw(40) << " You have selected item 7. Goodbye! " << endl;
       break;
     default:
-      cout << setw(40) << " Invalid Input! Please enter a number from 1-7!" << endl;
-      cout << setw(47) << "Press ENTER to continue..." << endl;
+      cout << setw(40) << "'" << Choice << "'" << "is invalid. Please enter a number from 1 - 7!"  << endl;
       cin.ignore(80, '\n');
       cin.get();
       cin >> Choice;
+       cout << setw(47) << "Press ENTER to continue..." << endl;
     
   }
 while (Choice != 7);
