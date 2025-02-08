@@ -52,7 +52,10 @@ cin >> Choice;
 	cin.get();
         break;
       default:
-         cout << "'" << Choice << "'" << "is invalid input. Please enter your choice again.";   
+         cout << "'" << Choice << "'" << "is invalid input. Please enter your choice again.";
+	 cout << setw(47) << "Press ENTER to continue..." << endl;
+	 cin.ignore();
+	 cin.get();
      }
 
   }while (Choice != '4');
