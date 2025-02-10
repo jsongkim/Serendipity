@@ -24,6 +24,7 @@ void cashier() {
 
 	do{
 	// Asks for user date input, initial menu.
+	system("clear");
 	std::cout 
 	<< "Serendipity Booksellers          \n"
 	<< "Cashier Module                   \n\n"
@@ -85,7 +86,7 @@ void cashier() {
 	std::cout
 	<< setw(57) << " " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << (total + tax) << "\n\n";
 
-	std::cout << "Thank You for Shoppig at Serendipity! \n\n";
+	std::cout << "Thank You for Shopping at Serendipity! \n\n";
 
 	// Queries user for further transactions.
 	std::cout << "Would you like to make another transaction? (Y/N):";
