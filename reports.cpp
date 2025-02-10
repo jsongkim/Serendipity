@@ -1,9 +1,3 @@
-//**************************************************************
-//* Author: Eric Bernal                                        *
-//* Assignment: G2                                             *
-//* Due Date: 02/04/2025                                       *
-//* Purpose: The reports module of the Serendipity Assignment. *
-//**************************************************************
 #include <iostream>
 #include <string>
 #include <iomanip>
@@ -17,40 +11,37 @@ void reports() {
   //Repeat menu until user has chosen to exit the program.
   do {
     cout << "\033[2J\033[1;1H";
-      cout << setw(30) << left << "Serendipity Booksellers\n Reports" << endl;
-      cout << setw(20) << left << "1. Inventory Listing\n2. Inventory Wholesale Value\n3. Inventory Retail Value\n4. Listing by Quantity\n5. Listing by Cost\n6. Listing by Age\n7. Return to Main Menu" << endl;
-      cout << setw(30) << left << "Enter Your Choice : " << rChoice << endl;
-      cout << setw(30) << left << "Please enter a number from 1 - 7!" << endl;
+      cout << "Serendipity Booksellers\n" << "Reports Module" << endl;
+      cout << "1. Inventory Listing\n2. Inventory Wholesale Value\n3. Inventory Retail Value\n4. Listing by Quantity\n5. Listing by Cost\n6. Listing by Age\n7. Return to Main Menu" << endl;
+      cout << "Enter Your Choice : ";
       cin >> rChoice;
     
 
   //Input Validation
   switch (rChoice) {
     case '1':
-      cout << setw(40) << " You have selected item 1. " << endl;
+      cout << "You have selected item 1. " << endl;
       break;
     case '2':
-      cout << setw(40) << " You have selected item 2. " << endl;
+      cout << "You have selected item 2. " << endl;
       break;
     case '3': 
-      cout << setw(40) << " You have selected item 3. " << endl;
+      cout << "You have selected item 3. " << endl;
       break;
     case '4':
-      cout << setw(40) << " You have selected item 4. " << endl;
+      cout << "You have selected item 4. " << endl;
       break;
     case '5':
-      cout << setw(40) << " You have selected item 5. " << endl;
+      cout << "You have selected item 5. " << endl;
       break;
     case '6':
-      cout << setw(40) <<  " You have selected item 6. " << endl;
+      cout << "You have selected item 6. " << endl;
       break;
     case '7':
-      cout << setw(40) << " You have selected item 7. Goodbye! " << endl;
+      cout << "You have selected item 7. " << endl;
       break;
     default:
-      cout << setw(40) << "'" << rChoice << "'" << "is invalid. Please enter a number from 1 - 7!"  << endl;
-      cin.ignore(80, '\n');
-      cin.get();
+      cout << "'" << rChoice << "' " << "is invalid. Please enter a number from 1 - 7: ";
       cin >> rChoice;
   }
       cout << setw(47) << "Press ENTER to continue..." << endl;
