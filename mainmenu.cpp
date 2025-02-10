@@ -9,6 +9,7 @@
 #include <iomanip>
 #include "cashier.h"
 #include "invmenu.h"
+#include "reports.h"
 using namespace std;
 
 int main() {
@@ -44,6 +45,7 @@ cin >> Choice;
 	cout << setw(47) << "Press ENTER to continue..." << endl;
 	cin.ignore();
 	cin.get();
+	      	reports();
         break;
       case '4': 
         cout << "\n" << setw(41) << "You selected item: 4" << endl;
