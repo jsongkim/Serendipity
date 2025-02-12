@@ -15,39 +15,41 @@ void invmenu()
   char choice;        //holds a char for easier input validation
 
   do{
-    cout << "\033[2J\033[1;1H";
+     cout << "\033[2J\033[1;1H";
     
      //hardcoded menu
-     cout << setw(46) << "Serendipity Booksellers" << endl;
-     cout << setw(43) << "Inventory Database" << endl;
-     cout << "\n" << setw(38) << "1. Look Up a Book" << endl;
-     cout << setw(34) << "2. Add a Book" << endl;
-     cout << setw(44) << "3. Edit a Book's Record" << endl;
-     cout << setw(37) << "4. Delete a Book" << endl;
-     cout << setw(47) << "5. Return to the Main Menu" << endl;
-     cout << "\n" << setw(39) << "Enter Your Choice:";
+	  cout << "==================================================================================\n";
+     cout << "= Serendipity Booksellers                                                        =" << endl;
+     cout << "= Inventory Database                                                             =" << endl;
+     cout << "= 1. Look Up a Book                                                              =" << endl;
+     cout << "= 2. Add a Book                                                                  =" << endl;
+     cout << "= 3. Edit a Book's Record                                                        =" << endl;
+     cout << "= 4. Delete a Book                                                               =" << endl;
+     cout << "= 5. Return to the Main Menu                                                     =" << endl;
+	  cout << "==================================================================================\n";
+     cout << "Enter your choice:";
 
          //Asks for user input as well as validates the input and pauses the terminal
          cin >> choice;        //input prompt
 
          switch (choice){
          case '1':
-            cout << "\n" << setw(41) << "You selected item: 1" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 1" << endl;
             break;
          case '2':
-            cout << "\n" << setw(41) << "You selected item: 2" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 2" << endl;
             break;
          case '3':
-            cout << "\n" << setw(41) << "You selected item: 3" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 3" << endl;
             break;
          case '4':
-            cout << "\n" << setw(41) << "You selected item: 4" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 4" << endl;
             break;
          case '5':
-            cout << "\n" << setw(41) << "You selected item: 5" << "\n" << endl;
+            cout << "\n" << setw(41) << "You selected item: 5" << endl;
             break;
          default:
-            cout << "\n" << setw(60) << "Please enter a number in the range 1-5." << "\n" << endl;    //input validation
+            cout << "\n" << setw(60) << "Please enter a number in the range 1-5." << endl;    //input validation
           }
     
           cout << setw(47) << "Press ENTER to continue..." << endl;
