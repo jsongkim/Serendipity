@@ -25,11 +25,12 @@ void cashier() {
 	do{
 	// Asks for user date input, initial menu.
 	system("clear");
-	std::cout 
-	<< "Serendipity Booksellers          \n"
-	<< "Cashier Module                   \n\n"
+	std::cout
+   	<< "==================================================================================\n"
+	<< "= Serendipity Booksellers                                                        =\n"
+	<< "= Cashier Module                                                                 =\n"
+	<< "==================================================================================\n\n"
 	<< "Date: ";
-	std::cin.ignore();
 	std::getline(std::cin, date);
 
 	// Asks for quantity. If statement checks for valid input data type.
@@ -70,23 +71,32 @@ void cashier() {
 	tax = 0.06 * total;
 
 	// Receipt printing.
-	std::cout 
-	<< "\nSerendipity Book Sellers \n"
-	<< "Date:" << date << "\n\n"
-	<< std::left << setw(5) << "Qty"	<< std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total  \n";
+	system("clear");
+	std::cout
+  	<< "==================================================================================\n"
+	<< "= Serendipity Book Sellers                                                       =\n"
+	<< "= Date: " << setw(7) << date << "                                                                  =\n"
+	<< std::left << setw(7) << "= Qty"	<< std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     =\n";
 	std::cout	
-	<< "________________________________________________________________________________ \n\n";
+	<< "==================================================================================\n";
 	std::cout 
-	<< std::left << setw(5) << qty	<< std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << total << "\n\n";
+	<< "= " << std::left << setw(5) << qty	<< std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << total << "  =\n";
+
+	std::cout
+	<< "=                                                                                =\n";
+
 
 	std::cout 
-	<< setw(57) << " " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << total << "\n";
+	<< "=" << setw(58) << "   " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << total << "  =\n";
 	std::cout
-	<< setw(57) << " " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << tax << "\n";
+	<< "=" << setw(58) << "   " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << tax << "  =\n";
 	std::cout
-	<< setw(57) << " " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << (total + tax) << "\n\n";
+	<< "=" << setw(58) << "   " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(5) << setprecision(2) << std::fixed << (total + tax) << "  =\n";
+ 	std::cout
+	<< "==================================================================================\n";
 
-	std::cout << "Thank You for Shopping at Serendipity! \n\n";
+
+	std::cout << "\nThank You for Shopping at Serendipity! \n\n";
 
 	// Queries user for further transactions.
 	std::cout << "Would you like to make another transaction? (Y/N):";
