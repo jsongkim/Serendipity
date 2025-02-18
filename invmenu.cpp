@@ -11,15 +11,14 @@
 #include <iomanip>
 #include <iostream>
 using namespace std;
+int invmenu(bookType array[], int bookCount)
+{
 
-void invmenu(bookType array[])
-{  
-  
   char choice;        //holds a char for easier input validation
 
   do{
      cout << "\033[2J\033[1;1H";
-    
+
      //hardcoded menu
 	  cout << "==================================================================================\n";
      cout << "= Serendipity Booksellers                                                        =" << endl;
@@ -43,8 +42,14 @@ void invmenu(bookType array[])
             cin.get(); 
             break;
          case '2':
-            cout << "\n" << setw(41) << "You selected item: 2" << endl;
-				addBook(array);
+				if(bookCount >= 20){
+					cout << "\n" << "The array is full!" << endl;
+					cout << "Press ENTER to continue..." << endl;
+					cin.ignore();
+					cin.get();
+					break;
+				}
+				bookCount = addBook(array, bookCount);
             break;
          case '3':
             cout << "\n" << setw(41) << "You selected item: 3" << endl;
@@ -67,5 +72,5 @@ void invmenu(bookType array[])
 
   }while(!(choice == '5'));       //exits inventory menu
 
-  return;
+  return bookCount;
 }
