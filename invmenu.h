@@ -3,5 +3,5 @@
 
 #include "bookType.h"
 
-void invmenu(bookType array[]);
+int invmenu(bookType array[], int bookCount);
 #endif
