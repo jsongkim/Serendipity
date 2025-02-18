@@ -6,18 +6,18 @@
 
 using namespace std;
 
-void addBook(bookType array[]){
+int addBook(bookType array[], int count){
 		  char choice2;
-		  int count = 0;
 		  string tempTitle;
 		  string tempISBN;
 		  string tempAuthor;
 		  string tempPub;
 		  string tempDate;
-		  int tempQty;
-		  double tempWhole;
-		  double tempRetail;
-        do{
+		  int tempQty = 0;
+		  double tempWhole = 0;
+		  double tempRetail = 0;
+
+		  do{
         system("clear");
 
         cout << "==================================================================================\n";
@@ -26,14 +26,14 @@ void addBook(bookType array[]){
         cout << "= Database Size: 20                                                              =\n";
         cout << "= Current Book Count: " << setw(20) << left << count << "                                       =\n";
         cout << "=                                                                                =\n";
-        cout << "= <1> Enter Book Title                                                           =\n";
-        cout << "= <2> Enter ISBN                                                                 =\n";
-        cout << "= <3> Edit Author                                                                =\n";
-        cout << "= <4> Enter Publisher                                                            =\n";
-        cout << "= <5> Enter Date Added <MM/DD/YYYY>                                              =\n";
-        cout << "= <6> Enter Quantity on Hand                                                     =\n";
-        cout << "= <7> Enter Wholesale Cost                                                       =\n";
-        cout << "= <8> Enter Retail Price                                                         =\n";
+        cout << "= <1> Enter Book Title              > --- " << setw(39) << tempTitle << "=\n";
+        cout << "= <2> Enter ISBN                    > --- " << setw(39) << tempISBN << "=\n";
+        cout << "= <3> Edit Author                   > --- " << setw(39) << tempAuthor << "=\n";
+        cout << "= <4> Enter Publisher               > --- " << setw(39) << tempPub << "=\n";
+        cout << "= <5> Enter Date Added <MM/DD/YYYY> > --- " << setw(39) << tempDate << "=\n";
+        cout << "= <6> Enter Quantity on Hand        > --- " << setw(39) << tempQty << "=\n";
+        cout << "= <7> Enter Wholesale Cost          > --- " << setw(39) << tempWhole << "=\n";
+        cout << "= <8> Enter Retail Price            > --- " << setw(39) << tempRetail << "=\n";
         cout << "= <9> Save Book to Database                                                      =\n";
         cout << "= <0> Return to Inventory Menu                                                   =\n";
         cout << "=                                                                                =\n";
@@ -109,7 +109,6 @@ void addBook(bookType array[]){
                         }
         break;
 		  case '9':
-        cout << "Save Book to Database: ";
 								array[count].bookTitle = tempTitle;
 								array[count].isbn = tempISBN;
 								array[count].author = tempAuthor;
@@ -121,12 +120,14 @@ void addBook(bookType array[]){
 								count++;
 		  break;
 		  case '0':
+								return count;
 		  break;
 		  default:
 		  						cout << "Please enter a valid choice <1-9>:";
                         cin >> choice2;
                         cout << "\n";
                         cin.ignore();
-        }
-        } while (choice2 != '0' && count != 20);
+		  }
+		  }while (choice2 != '0' && count != 20);
+		  return count;
 }
