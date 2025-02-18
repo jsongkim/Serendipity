@@ -1,5 +1,7 @@
 #ifndef INVMENU_H
 #define INVMENU_H
 
-void invmenu();
+#include "bookType.h"
+
+void invmenu(bookType array[]);
 #endif
