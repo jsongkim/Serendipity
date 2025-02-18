@@ -8,6 +8,7 @@
  *********************************************/
 #include "bookType.h"
 #include "addBook.cpp"
+#include "editBook.cpp"
 #include <iomanip>
 #include <iostream>
 using namespace std;
@@ -52,10 +53,14 @@ int invmenu(bookType array[], int bookCount)
 				bookCount = addBook(array, bookCount);
             break;
          case '3':
-            cout << "\n" << setw(41) << "You selected item: 3" << endl;
-				cout << setw(47) << "Press ENTER to continue..." << endl;
-            cin.ignore(80, '\n');
-            cin.get(); 
+            if(bookCount < 0) {
+		    cout << "\n" << "There are no book entries available!" << endl;
+		    cout << "Press ENTER to continue..." << endl;
+		    cin.ignore();
+		    cin.get();
+		    break;
+	    }
+		 editBook(array, bookCount);
             break;
          case '4':
             cout << "\n" << setw(41) << "You selected item: 4" << endl;
