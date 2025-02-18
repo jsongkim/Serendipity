@@ -1,3 +1,4 @@
+
 /**********************************************
  * Author: David Pena
  * Assignment: Serendipity
@@ -5,11 +6,13 @@
  * Purpose: Menu for different inventory
  * options apart of Serendipity.
  *********************************************/
+#include "bookType.h"
+#include "addBook.cpp"
 #include <iomanip>
 #include <iostream>
 using namespace std;
 
-void invmenu()
+void invmenu(bookType array[])
 {  
   
   char choice;        //holds a char for easier input validation
@@ -35,15 +38,25 @@ void invmenu()
          switch (choice){
          case '1':
             cout << "\n" << setw(41) << "You selected item: 1" << endl;
+				cout << setw(47) << "Press ENTER to continue..." << endl;
+            cin.ignore(80, '\n');
+            cin.get(); 
             break;
          case '2':
             cout << "\n" << setw(41) << "You selected item: 2" << endl;
+				addBook(array);
             break;
          case '3':
             cout << "\n" << setw(41) << "You selected item: 3" << endl;
+				cout << setw(47) << "Press ENTER to continue..." << endl;
+            cin.ignore(80, '\n');
+            cin.get(); 
             break;
          case '4':
             cout << "\n" << setw(41) << "You selected item: 4" << endl;
+				cout << setw(47) << "Press ENTER to continue..." << endl;
+            cin.ignore(80, '\n');
+            cin.get(); 
             break;
          case '5':
             cout << "\n" << setw(41) << "You selected item: 5" << endl;
@@ -51,10 +64,6 @@ void invmenu()
          default:
             cout << "\n" << setw(60) << "Please enter a number in the range 1-5." << endl;    //input validation
           }
-    
-          cout << setw(47) << "Press ENTER to continue..." << endl;
-          cin.ignore(80, '\n');       //pauses the terminal
-          cin.get(); 
 
   }while(!(choice == '5'));       //exits inventory menu
 
