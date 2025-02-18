@@ -10,6 +10,7 @@
 #include "cashier.h"
 #include "invmenu.h"
 #include "reports.h"
+#include "bookType.h"
 using namespace std;
 
 int main() {
@@ -17,8 +18,12 @@ int main() {
 char Choice;  // INPUT : User's choice
 
 // Create while loop menu until 4/Exit is chosen
+
+bookType array[20] = {};
+
 do{
-cout << "\033[2J\033[1;1H";
+system("clear");
+
 cout << "==================================================================================\n";
 cout << "= Serendipity Booksellers                                                        =\n";
 cout << "= Main Menu                                                                      =\n";
@@ -34,35 +39,27 @@ cin >> Choice;
 // Prompt showing what user selected
     switch (Choice) {
       case '1':
-        cout << "\n" << setw(41) << "You selected item: 1" << endl;
-	cout << setw(47) << "Press ENTER to continue..." << endl;
+        cout << "\n" << "You selected item: 1" << endl;
+	cout << "Press ENTER to continue..." << endl;
 	cin.ignore();
 	cin.get();
 		cashier();
         break;
       case '2': 
-        cout << "\n" << setw(41) << "You selected item: 2" << endl;
-	cout << setw(47) << "Press ENTER to continue..." << endl;
-	cin.ignore();
-	cin.get();
-		invmenu();
+		invmenu(array);
         break;
       case '3':
-        cout << "\n" << setw(41) << "You selected item: 3" << endl;
-	cout << setw(47) << "Press ENTER to continue..." << endl;
+        cout << "\n" << "You selected item: 3" << endl;
+	cout << "Press ENTER to continue..." << endl;
 	cin.ignore();
 	cin.get();
 	reports();
         break;
       case '4': 
-        cout << "\n" << setw(41) << "You selected item: 4" << endl;
-	cout << setw(47) << "Press ENTER to continue..." << endl;
-	cin.ignore();
-	cin.get();
         break;
       default:
          cout << "\n'" << Choice << "'" << "is invalid input. Please enter your choice again. \n";
-	 cout << setw(47) << "Press ENTER to continue..." << endl;
+	 cout << "Press ENTER to continue..." << endl;
 	 cin.ignore();
 	 cin.get();
      }
