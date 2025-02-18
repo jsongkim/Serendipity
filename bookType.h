@@ -13,6 +13,6 @@ struct bookType {
         int qtyOnHand;
         double wholesale;
         double retail;
-}
+};
 
 #endif
