@@ -31,21 +31,39 @@ void reports() {
   switch (rChoice) {
     case '1':
       cout << "\nYou have selected item 1. " << endl;
+		cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       break;
     case '2':
       cout << "\nYou have selected item 2. " << endl;
+		cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       break;
     case '3': 
       cout << "\nYou have selected item 3. " << endl;
+		cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       break;
     case '4':
       cout << "\nYou have selected item 4. " << endl;
+		cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       break;
     case '5':
       cout << "\nYou have selected item 5. " << endl;
+		cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       break;
     case '6':
       cout << "\nYou have selected item 6. " << endl;
+		cout << setw(47) << "Press ENTER to continue..." << endl;
+      cin.ignore(80, '\n');
+      cin.get();
       break;
     case '7':
       cout << "\nYou have selected item 7. " << endl;
@@ -53,10 +71,6 @@ void reports() {
     default:
       cout << "\n'" << rChoice << "' " << "is invalid. Please enter a number from 1 - 7. \n";
   }
-      cout << setw(47) << "Press ENTER to continue..." << endl;
-     cin.ignore(80, '\n');
-      cin.get();
-    
   }while (rChoice != '7');
 
 return;
