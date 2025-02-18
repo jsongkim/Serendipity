@@ -21,6 +21,8 @@ char Choice;  // INPUT : User's choice
 
 bookType array[20] = {};
 
+int bookCount = 0;
+
 do{
 system("clear");
 
@@ -46,8 +48,8 @@ cin >> Choice;
 		cashier();
         break;
       case '2': 
-		invmenu(array);
-        break;
+			bookCount = invmenu(array, bookCount);
+      break;
       case '3':
         cout << "\n" << "You selected item: 3" << endl;
 	cout << "Press ENTER to continue..." << endl;
