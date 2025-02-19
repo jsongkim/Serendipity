@@ -2,23 +2,20 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include "bookType.h"
 using namespace std;
 
-int main() {
-    system("clear");
+void bookInfo(bookType array[], int bookIndex){
 
-	cout << "==================================================================================\n";
-    cout << "= Serendipity Booksellers                                                        =\n";
-    cout << "= Book Information:                                                              =\n";
-    cout << "= ISBN:                                                                          =\n";
-    cout << "= Title:                                                                         =\n";
-    cout << "= Author:                                                                        =\n";
-    cout << "= Publisher:                                                                     =\n";
-    cout << "= Date Added:                                                                    =\n";
-    cout << "= Quantity On Hand:                                                              =\n";
-    cout << "= Wholesale Cost:                                                                =\n";
-    cout << "= Retail Price:                                                                  =\n";
-	 cout << "==================================================================================\n";
-    return 0;
+	cout << "Book Title:------------------------------------------ >" << array[bookIndex].bookTitle << endl;
+	cout << "ISBN:------------------------------------------------ >" << array[bookIndex].isbn << endl;
+	cout << "Author:---------------------------------------------- >" << array[bookIndex].author << endl;
+	cout << "Publisher:------------------------------------------- >" << array[bookIndex].publisher << endl;
+	cout << "Date Added:------------------------------------------ >" << array[bookIndex].dateAdded << endl;
+	cout << "Quantity on Hand:------------------------------------ >" << array[bookIndex].qtyOnHand << endl;
+	cout << "Wholesale:------------------------------------------- >" << array[bookIndex].wholesale << endl;
+	cout << "Retail:---------------------------------------------- >" << array[bookIndex].retail << endl;
+	
+return;
 }
 //I think it works, I hope it works, rehualed version with better borders
