@@ -1,4 +1,3 @@
-
 /**********************************************
  * Author: David Pena
  * Assignment: Serendipity
@@ -39,12 +38,23 @@ int invmenu(bookType array[], int bookCount)
 
          switch (choice){
          case '1':
-            bookIndex = lookUpBook(array, bookCount);
-	    bookInfo(array, bookIndex);
-	    cout << setw(47) << "Press ENTER to continue..." << endl;
-            cin.ignore(80, '\n');
-            cin.get(); 
-            break;
+		 if(bookCount == 0)
+		 {
+			 cout << "\n" << "There are no book entries available!" << endl;
+			 cout << "Press ENTER to continue..." << endl;
+		 }
+		 else
+		 {
+			 bookIndex = lookUpBook(array, bookCount);
+			 if(!(bookIndex < 0))
+			 {
+				 bookInfo(array, bookIndex);
+			 }
+	    		 cout << setw(47) << "Press ENTER to continue..." << endl;
+		 }
+            	cin.ignore(80, '\n');
+            	cin.get(); 
+            	break;
          case '2':
 				if(bookCount >= 20){
 					cout << "\n" << "The array is full!" << endl;
