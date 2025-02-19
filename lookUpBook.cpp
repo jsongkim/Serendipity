@@ -10,7 +10,7 @@ void lookUpBook(bookType array[], int bookCount){
   bool match;
   char choice;
 
-  cout << ">>> BOOK LOOK UP <<<" << endl;
+  cout << "\n" << ">>> BOOK LOOK UP <<<" << endl;
   cout << "Search: >";
   cin >> title;
 
@@ -30,21 +30,53 @@ void lookUpBook(bookType array[], int bookCount){
                    break;
                 }
              }
-             if(match)
-             {
-                cout << "\n" << "RESULT>: " << array[g].bookTitle << endl;
-                cout << "View this book record? <Y/N>: ";
-                cin >> choice;
-                break;
-             }    
+             if(match)  
+             {  
+                   cout << "\n" << "RESULT>: " << array[g].bookTitle << endl;      
+                   cout << "View this book record? <Y/N>: ";            
+                   do{                                         
+                        cin >> choice;         
+                        choice = toupper(choice);         
+                    
+                        if((choice != 'Y') || (choice != 'N'))   
+                        {                                     
+                              cout << "'" << choice << "'" << " is not a valid input" << endl;     
+                              cout << "Please only enter " << "Y" << "or" << "N" << endl;       
+                        }                             
+                     }while((choice != 'Y') || (choice != 'N'))      
+                     break;                       
+              }                 
+              else                
+              {             
+                  cout << "\n" << "Sorry but there is no " << title << " in our inventory" << endl;   
+                  cout << "Would you like to keep searching? <Y/N>: ";       
+                  do{                      
+                        cin >> choice;      
+                        choice = toupper(choice);        
+                                 
+                        if(choice == 'Y')          
+                        {                         
+                            choice = 'N';     
+                        }              
+                        else if(choice == 'N')  
+                        {            
+                            choice = 'Y';    
+                        }                  
+                        else               
+                        {               
+                            cout << "'" << choice << "'" << " is not a valid input" << endl;  
+                            cout << "Please only enter " << "Y" << "or" << "N" << endl; 
+                        }                         
+                    }while((choice != 'Y') || (choice != 'N'))    
+                }
           }
-          if(choice == 'y')
+          if(choice == 'Y')
           {
              break;
           }
        }
 
-  }while(!(choice == 'y'));
+  }while(!(choice == 'Y'));
 
 return;
 }
