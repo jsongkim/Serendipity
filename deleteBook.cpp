@@ -33,6 +33,10 @@ comes to searching and confirming the delete.
   
 using namespace std;
 
+
+
+
+
 int deleteBook(bookType array[], int count) {
 
   system("clear");
@@ -58,7 +62,7 @@ string title;
   titleLength = title.size();
   
   do{
-      for(int g = 0; g < bookCount; g++)
+      for(int g = 0; g < count; g++)
       {
           bookIndex = g;
           tempTitle = array[g].bookTitle;//change
@@ -104,12 +108,28 @@ string title;
 		cout << "Press any key to continue..." << endl;
 		std::getchar();
 		
+                cout << "Is this the book you want to delete? <Y/N>: ";
+                do{
+                      cin >> choice;
+                      choice = toupper(choice);
+        
+                      if(!(choice == 'Y') && !(choice == 'N'))
+                      {
+                           cout << "'" << choice << "'" << " is not a valid input" << endl;
+                           cout << "Please only enter " << "Y" << " or " << "N" << endl;
+                       }
+                }while(!(choice == 'Y') && !(choice == 'N'));
+                if(choice == 'Y') { 
 
+	        for (int i = bookIndex; i < count - 1; ++i) {
+ 	           array[i] = array[i + 1];
+ 	        }
 
+  	        count--;
 
-
-
-
+		} else {
+		break;
+		}
           }
       }
       if((match == false) && (choice == '\n'))
@@ -119,18 +139,7 @@ string title;
       }
     }while(!(choice == 'Y'));
   
-  return bookIndex;
-
-
-
-
-
-
-
-
-
-
-
+  return count;
 
 }
 
