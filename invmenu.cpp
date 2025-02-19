@@ -79,6 +79,7 @@ int invmenu(bookType array[], int bookCount)
 				cout << setw(47) << "Press ENTER to continue..." << endl;
             cin.ignore(80, '\n');
             cin.get(); 
+		 bookCount = deleteBook(array, bookCount);
             break;
          case '5':
             cout << "\n" << setw(41) << "You selected item: 5" << endl;
