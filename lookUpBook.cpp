@@ -3,6 +3,7 @@
 #include <bits/stdc++.h>
 #include <cctype>
 #include "bookType.h"
+#include "lookUpBook.h"
 using namespace std;
 
 int lookUpBook(bookType array[], int bookCount){
