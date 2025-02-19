@@ -8,6 +8,8 @@
  *********************************************/
 #include "bookType.h"
 #include "addBook.cpp"
+#include "lookUpBook.cpp"
+#include "bookInfo.cpp"
 #include <iomanip>
 #include <iostream>
 using namespace std;
@@ -15,6 +17,7 @@ int invmenu(bookType array[], int bookCount)
 {
 
   char choice;        //holds a char for easier input validation
+  int bookIndex = 0;
 
   do{
      cout << "\033[2J\033[1;1H";
@@ -36,8 +39,9 @@ int invmenu(bookType array[], int bookCount)
 
          switch (choice){
          case '1':
-            cout << "\n" << setw(41) << "You selected item: 1" << endl;
-				cout << setw(47) << "Press ENTER to continue..." << endl;
+            bookIndex = lookUpBook(array, bookCount);
+	    bookInfo(array, bookIndex);
+	    cout << setw(47) << "Press ENTER to continue..." << endl;
             cin.ignore(80, '\n');
             cin.get(); 
             break;
