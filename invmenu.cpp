@@ -9,6 +9,7 @@
 #include "addBook.cpp"
 #include "lookUpBook.cpp"
 #include "bookInfo.cpp"
+#include "deleteBook.cpp"
 #include <iomanip>
 #include <iostream>
 using namespace std;
