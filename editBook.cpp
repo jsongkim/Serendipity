@@ -24,6 +24,13 @@ int editBook(bookType array[], int count) {
   int bookIndex = 0;
   bool match;
   char choice = '\n';
+	string tempAuthor;
+	string tempISBN;
+	string tempPub;
+	string tempDate;
+	int tempQty;
+	float tempWhole;
+	float tempRetail;
 	char choice2;
 	
   cout << "==================================================================================\n";
@@ -197,7 +204,7 @@ int editBook(bookType array[], int count) {
 								array[count].qtyOnHand = tempQty;
 								array[count].wholesale = tempWhole;
 								array[count].retail = tempRetail;
-								count++;
+								
 		  break;
 		  case '0':
 								return count;
@@ -215,7 +222,7 @@ int editBook(bookType array[], int count) {
 		} else {
 		break;
 		}
-          }
+          };
       }
       if((match == false) && (choice == '\n'))
       {
