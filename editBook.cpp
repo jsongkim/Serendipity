@@ -24,6 +24,7 @@ int editBook(bookType array[], int count) {
   int bookIndex = 0;
   bool match;
   char choice = '\n';
+	char choice2;
 	
   cout << "==================================================================================\n";
         cout << "= Serendipity Booksellers                                                        =\n";
