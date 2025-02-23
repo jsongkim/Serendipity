@@ -11,6 +11,7 @@
 #include "bookType.h"
 #include <bits/stdc++.h>
 #include <cstring>
+#include "lookUpBook.h"
 using namespace std;
 
 int editBook(bookType array[], int count) {
@@ -21,6 +22,7 @@ int editBook(bookType array[], int count) {
   string tempTitle; // FOR LOOK UP
   string tempTitle2; // FOR EDIT
   int titleLength;
+  int bookIndex = 0;
   bool match;
   char choice = '\n';
 	string tempAuthor;
