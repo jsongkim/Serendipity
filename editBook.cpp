@@ -22,7 +22,7 @@ int editBook(bookType array[], int count) {
   string tempTitle; // FOR LOOK UP
   string tempTitle2; // FOR EDIT
   int titleLength;
-  int bookIndex;
+  int bookArr = 0;
   bool match;
   char choice = '\n';
 	string tempAuthor;
@@ -50,7 +50,7 @@ int editBook(bookType array[], int count) {
   do{
       for(int g = 0; g < count; g++)
       {
-          bookIndex = g;
+          bookArr = g;
           tempTitle = array[g].bookTitle;//change
           transform(tempTitle.begin(), tempTitle.end(), tempTitle.begin(), ::tolower);//change
           for(size_t i = 0; i <= array[g].bookTitle.size() - titleLength; i++)
