@@ -107,6 +107,9 @@ int editBook(bookType array[], int count) {
                 if(choice == 'Y') { 
 
 	        //edit book
+
+	do{
+		system("clear");
                      cout << "==================================================================================\n";
         cout << "= Serendipity Booksellers                                                        =\n";
         cout << "= Edit Book                                                                       =\n";
