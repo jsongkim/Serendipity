@@ -22,7 +22,7 @@ int editBook(bookType array[], int count) {
   string tempTitle; // FOR LOOK UP
   string tempTitle2; // FOR EDIT
   int titleLength;
-  int bookIndex = 0;
+  int bookIndex;
   bool match;
   char choice = '\n';
 	string tempAuthor;
