@@ -10,6 +10,7 @@
 #include "lookUpBook.cpp"
 #include "bookInfo.cpp"
 #include "deleteBook.cpp"
+#include "editBook.cpp"
 #include <iomanip>
 #include <iostream>
 using namespace std;
@@ -74,6 +75,7 @@ int invmenu(bookType array[], int bookCount)
 		    cin.get();
 		    break;
 	    }
+		 bookCount = addBook(array, bookCount);
             break;
          case '4':
             cout << "\n" << setw(41) << "You selected item: 4" << endl;
