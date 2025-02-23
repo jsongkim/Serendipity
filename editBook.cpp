@@ -219,10 +219,8 @@ int editBook(bookType array[], int count) {
                         cin.ignore();
 		  }
 		  }while (choice2 != '0' && count != 20);
-		  return count;
 
 		}
-	  }
 	  	else {
 		break;
 		}
