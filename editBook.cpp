@@ -206,6 +206,7 @@ int editBook(bookType array[], int count) {
 								array[count].qtyOnHand = tempQty;
 								array[count].wholesale = tempWhole;
 								array[count].retail = tempRetail;
+			  					count++;
 								
 		  break;
 		  case '0':
