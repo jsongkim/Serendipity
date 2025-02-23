@@ -219,9 +219,10 @@ int editBook(bookType array[], int count) {
 		  return count;
 }
 
-		} else {
+		} 
+	  	else {
 		break;
-		}
+		};
           };
       }
       if((match == false) && (choice == '\n'))
