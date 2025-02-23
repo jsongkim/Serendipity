@@ -220,14 +220,13 @@ int editBook(bookType array[], int count) {
 		  }
 		  }while (choice2 != '0' && count != 20);
 		  return count;
-}
 
-		} 
+		}
 	  	else {
 		break;
 		};
-          };
       }
+	  
       if((match == false) && (choice == '\n'))
       {
            cout << "\n" << "Sorry but there is no " << "'" << title << "'" << " in our inventory" << endl;
