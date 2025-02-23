@@ -225,6 +225,7 @@ int editBook(bookType array[], int count) {
 		break;
 		}
 	  }
+	  }
       if((match == false) && (choice == '\n'))
       {
            cout << "\n" << "Sorry but there is no " << "'" << title << "'" << " in our inventory" << endl;
