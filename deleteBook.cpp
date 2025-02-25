@@ -26,7 +26,7 @@ int deleteBook(bookType array[], int count) {
   cout << "= Current Book Count: " << setw(20) << left << count << "                                       =\n";
   cout << "=                                                                                =\n";
   cout << "==================================================================================\n";
-
+  cout << "Search:";
   index = lookUpBook(array, count);
 
 
