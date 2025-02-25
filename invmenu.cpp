@@ -68,14 +68,16 @@ int invmenu(bookType array[], int bookCount)
 				bookCount = addBook(array, bookCount);
             break;
          case '3':
-            if(bookCount < 0) {
+            if(bookCount == 0) {
 		    cout << "\n" << "There are no book entries available!" << endl;
 		    cout << "Press ENTER to continue..." << endl;
 		    cin.ignore();
 		    cin.get();
 		    break;
 	    }
+		else {
 		 bookCount = editBook(array, bookCount);
+		}
             break;
          case '4':
             cout << "\n" << setw(41) << "You selected item: 4" << endl;
