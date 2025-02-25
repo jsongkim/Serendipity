@@ -47,6 +47,8 @@ int invmenu(bookType array[], int bookCount)
 		 }
 		 else
 		 {
+			 cout << "\n" << ">>> BOOK LOOK UP <<<" << endl;
+			 cout << "Search: > ";
 			 bookIndex = lookUpBook(array, bookCount);
 			 if(!(bookIndex < 0))
 			 {
