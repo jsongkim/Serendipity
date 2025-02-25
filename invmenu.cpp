@@ -82,8 +82,6 @@ int invmenu(bookType array[], int bookCount)
 			 {
 				 bookInfo(array, bookIndex);
 			 }
-	    		 cout << setw(47) << "Press ENTER to continue..." << endl;
-		 }
             break;
          case '4':
             cout << "\n" << setw(41) << "You selected item: 4" << endl;
