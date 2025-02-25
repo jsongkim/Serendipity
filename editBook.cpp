@@ -83,17 +83,7 @@ int editBook(bookType array[], int count) {
           }
           if(choice == 'Y')
           {                                               
-          	cout << "\n" << "Book Title:------------------------------------------ > " << array[count].bookTitle << endl;
-		cout << "ISBN:------------------------------------------------ > " << array[count].isbn << endl;
-		cout << "Author:---------------------------------------------- > " << array[count].author << endl;
-		cout << "Publisher:------------------------------------------- > " << array[count].publisher << endl;
-		cout << "Date Added:------------------------------------------ > " << array[count].dateAdded << endl;
-		cout << "Quantity on Hand:------------------------------------ > " << array[count].qtyOnHand << endl;
-		cout << "Wholesale:------------------------------------------- > " << array[count].wholesale << endl;
-		cout << "Retail:---------------------------------------------- > " << array[count].retail << endl;
-		cout << "Press any key to continue..." << endl;
 		std::getchar();
-		
                 cout << "Is this the book you want to edit? <Y/N>: ";
                 do{
                       cin >> choice;
