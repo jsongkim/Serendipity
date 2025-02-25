@@ -30,8 +30,8 @@ int editBook(bookType array[], int count) {
 	string tempPub;
 	string tempDate;
 	int tempQty;
-	float tempWhole;
-	float tempRetail;
+	double tempWhole;
+	double tempRetail;
 	char choice2;
 	
   cout << "==================================================================================\n";
@@ -82,7 +82,8 @@ int editBook(bookType array[], int count) {
                 }
           }
           if(choice == 'Y')
-          {                                               
+          {
+		break;
 		std::getchar();
                 cout << "Is this the book you want to edit? <Y/N>: ";
                 do{
