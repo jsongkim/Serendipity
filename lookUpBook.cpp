@@ -15,8 +15,6 @@ int lookUpBook(bookType array[], int bookCount){
   bool match;
   char choice = '\n';
   
-  cout << "\n" << ">>> BOOK LOOK UP <<<" << endl;
-  cout << "Search: > ";
   cin >> title;
   
   transform(title.begin(), title.end(), title.begin(), ::tolower);//change
@@ -57,11 +55,11 @@ int lookUpBook(bookType array[], int bookCount){
                 }
           }
           if(choice == 'Y')
-          {                                               
+          {
               break;
           }
       }
-      if((match == false) && (choice == '\n'))
+      if(((match == false) && (choice == '\n')) || (match == false))
       {
            cout << "\n" << "Sorry but there is no " << "'" << title << "'" << " in our inventory" << endl;
            return -1;
