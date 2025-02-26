@@ -8,7 +8,7 @@ using namespace std;
 int deleteBook(bookType array[], int count) {
 
 system("clear");
-int index = 0;
+int index = -1;
 char choice;
 
 cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
@@ -21,10 +21,19 @@ cout << "▌                                                                    
 cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n\n";
 
 cout << "Search:";
+
+
 index = lookUpBook(array, count);
+if(index == -1){
+        cout << "Press ENTER to continue..." << endl;
+        cin.ignore();
+        cin.get();
+        return count;
+}
 
+bookInfo(array, index);
 
-cout << "Is this the book you want to delete? <Y/N>: ";
+cout << "\nIs this the book you want to delete? <Y/N>: ";
 do{
         cin >> choice;
         choice = toupper(choice);
