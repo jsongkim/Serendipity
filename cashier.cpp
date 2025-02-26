@@ -18,14 +18,14 @@ char choice = 'Y';
 // Do while loop for menu.
 do{
 system("clear");
-cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                            Serendipity Booksellers                             ▐\n";
-cout << "▌                                Cashier Module                                  ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
+cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+cout << "                                                                                \n";
+cout << "                                                                                \n";
+cout << "                            Serendipity Booksellers                             \n";
+cout << "                                Cashier Module                                  \n";
+cout << "                                                                                \n";
+cout << "                                                                                \n";
+cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
 
 cout << "\nDate: ";
 std::getline(std::cin, date);
@@ -70,20 +70,20 @@ tax = 0.06 * total;
 // Receipt printing.
 
 system("clear");
-cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                            Serendipity Booksellers                             ▐\n";
-cout << "▌ Date: " << setw(7) << date << "                                                                  ▐\n";
-cout << left << setw(9) << "▌ Qty"      << std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌ " << std::left << setw(5) << qty     << std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " ▐\n";
-cout << "▌                                                                                ▐\n";
+cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+cout << "                                                                                \n";
+cout << "                                                                                \n";
+cout << "                            Serendipity Booksellers                             \n";
+cout << " Date: " << setw(7) << date << "                                                                  \n";
+cout << left << setw(9) << "▌ Qty"      << std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     \n";
+cout << "                                                                                \n";
+cout << " " << std::left << setw(5) << qty     << std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " \n";
+cout << "                                                                                \n";
 
-cout << "▌" << setw(58) << "   " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " ▐\n";
-cout << "▌" << setw(58) << "   " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << tax << setw(2) << " ▐\n";
-cout << "▌" << setw(58) << "   " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << (total + tax) << setw(2) << " ▐\n";
-cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
+cout << "" << setw(58) << "   " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " \n";
+cout << "" << setw(58) << "   " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << tax << setw(2) << " \n";
+cout << "" << setw(58) << "   " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << (total + tax) << setw(2) << " \n";
+cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
 
 cout << "\nThank You for Shopping at Serendipity! \n\n";
 
