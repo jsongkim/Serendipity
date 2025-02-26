@@ -15,7 +15,8 @@ int lookUpBook(bookType array[], int bookCount){
   bool match;
   char choice = '\n';
   
-  cin >> title;
+  cin.ignore();
+  getline(cin, title);
   
   transform(title.begin(), title.end(), title.begin(), ::tolower);//change
   titleLength = title.size();
@@ -59,6 +60,11 @@ int lookUpBook(bookType array[], int bookCount){
           {
               break;
           }
+      }
+      if(choice == 'N')
+      {
+        cout << "\n" << "Sorry we don't have what your looking for" << endl;
+        return -1;
       }
       if(((match == false) && (choice == '\n')) || (match == false))
       {
