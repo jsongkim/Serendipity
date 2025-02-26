@@ -75,7 +75,7 @@ cout << "                                                                       
 cout << "                                                                                \n";
 cout << "                            Serendipity Booksellers                             \n";
 cout << " Date: " << setw(7) << date << "                                                                  \n";
-cout << left << setw(9) << "▌ Qty"      << std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     \n";
+cout << left << setw(9) << " Qty"      << std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     \n";
 cout << "                                                                                \n";
 cout << " " << std::left << setw(5) << qty     << std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " \n";
 cout << "                                                                                \n";
