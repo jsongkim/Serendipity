@@ -62,7 +62,7 @@ int lookUpBook(bookType array[], int bookCount){
       }
       if(((match == false) && (choice == '\n')) || (match == false))
       {
-           cout << "\n" << "Sorry but there is no " << "'" << title << "'" << " in our inventory" << endl;
+           cout << "\n" << "Sorry but there is no " << "'" << title << "'" << " in our inventory." << endl;
            return -1;
       }
     }while(!(choice == 'Y'));
