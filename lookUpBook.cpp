@@ -44,6 +44,7 @@ int lookUpBook(bookType array[], int bookCount){
                      do{
                            cin >> choice;
                            choice = toupper(choice);
+                           cout << "\n";
         
                            if(!(choice == 'Y') && !(choice == 'N'))
                            {
