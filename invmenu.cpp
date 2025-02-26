@@ -17,19 +17,19 @@ int bookIndex = 0;
 do{
 system("clear");
 
-cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                            Serendipity Booksellers                             ▐\n";
-cout << "▌                                Inventory Menu                                  ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌ 1. Look Up a Book                                                              ▐\n";
-cout << "▌ 2. Add a Book                                                                  ▐\n";
-cout << "▌ 3. Edit a Book's Record                                                        ▐\n";
-cout << "▌ 4. Delete a Book                                                               ▐\n";
-cout << "▌ 5. Return to the Main Menu                                                     ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
+cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+cout << "                                                                                \n";
+cout << "                                                                                \n";
+cout << "                            Serendipity Booksellers                             \n";
+cout << "                                Inventory Menu                                  \n";
+cout << "                                                                                \n";
+cout << " 1. Look Up a Book                                                              \n";
+cout << " 2. Add a Book                                                                  \n";
+cout << " 3. Edit a Book's Record                                                        \n";
+cout << " 4. Delete a Book                                                               \n";
+cout << " 5. Return to the Main Menu                                                     \n";
+cout << "                                                                                \n";
+cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
 
 cout << "\nEnter your choice:";
 cin >> choice;
@@ -42,9 +42,9 @@ case '1':
                 cout << "Press ENTER to continue..." << endl;
         }
         else{
-                cout << "\n▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜";
-                cout << "\n▌                                 BOOK LOOK UP                                   ▐";
-                cout << "\n▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟";
+                cout << "\n▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀";
+                cout << "\n                                 BOOK LOOK UP                                   ";
+                cout << "\n▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄";
                 cout << "\n\nSearch: > ";
                 bookIndex = lookUpBook(array, bookCount);
         if(!(bookIndex < 0)){
