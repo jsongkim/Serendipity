@@ -2,7 +2,8 @@
 #include <iomanip>
 #include <string>
 #include "bookType.h"
-
+#include "bookInfo.h"
+#include "lookUpBook.h"
 using namespace std;
 
 int deleteBook(bookType array[], int count) {
@@ -22,7 +23,7 @@ cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄�
 
 cout << "Search:";
 
-
+do {
 index = lookUpBook(array, count);
 if(index == -1){
         cout << "Press ENTER to continue..." << endl;
@@ -46,6 +47,16 @@ if(choice == 'Y') {
         array[index] = array[(count-1)];
         count = count - 1;
 }
+
+cout << "Delete another? <Y/N>";
+cin << choice;
+if(!(choice == 'Y') && !(choice == 'N')){
+     cout << "'" << choice << "'" << " is not a valid input" << endl;
+     cout << "Please only enter " << "Y" << " or " << "N" << endl;
+     }
+
+}while(choice == 'Y');
+
 
 
 return count;
