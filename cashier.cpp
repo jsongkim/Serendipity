@@ -1,120 +1,110 @@
-/**********************************************************
-* Author: Joseph Song-Kim
-* Assignment: G2
-* Due Date: 2/4/2025
-* Purpose: Cashier/receipt printing program meant for the 
-* Serendipity application.
-**********************************************************/
-
 #include <string>
 #include <iomanip>
 #include <iostream>
 using namespace std;
 
 void cashier() {
-	// Variable declaration. Sets choice to 'Y' by default to facilitate loop.
-	std::string date;
-	int qty;
-	std::string isbn;
-	std::string title;
-	float price;
-	float total;
-	float tax;
-	char choice = 'Y';
 
-	do{
-	// Asks for user date input, initial menu.
-	system("clear");
-	std::cout
-   	<< "===================================================================================\n"
-	<< "= Serendipity Booksellers                                                         =\n"
-	<< "= Cashier Module                                                                  =\n"
-	<< "===================================================================================\n\n"
-	<< "Date: ";
-	std::getline(std::cin, date);
+// Variable declaration. Sets choice to 'Y' by default to facilitate loop.
+string date;
+int qty;
+string isbn;
+string title;
+float price;
+float total;
+float tax;
+char choice = 'Y';
 
-	// Asks for quantity. If statement checks for valid input data type.
-	std::cout << "Quantity of Book: ";
-	std::cin >> qty;
-	if (std::cin.fail() == true){
-		do{ 
-			std::cin.clear();
-			std::cin.ignore();
-			std::cout << "Please enter a valid quantity:";
-			std::cin >> qty;
-		} while (std::cin.fail() == true);
-	}
+// Do while loop for menu.
+do{
+system("clear");
+cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                            Serendipity Booksellers                             ▐\n";
+cout << "▌                                Cashier Module                                  ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
 
-	// Asks for ISBN. Check not necessary because it is a string.
-	std::cout << "ISBN: ";
-	std::cin.ignore();
-	std::getline(std::cin, isbn);
+cout << "\nDate: ";
+std::getline(std::cin, date);
 
-	// Asks for title. Check not necessary because it is a string.
-	std::cout << "Title: ";
-	std::getline(std::cin, title);
+// Asks for quantity. If statement checks for valid input data type.
+cout << "Quantity of Book: ";
+cin >> qty;
+if (cin.fail() == true){
+        do{
+                cin.clear();
+                cin.ignore();
+                cout << "Please enter a valid quantity:";
+                cin >> qty;
+        } while (std::cin.fail() == true);
+}
 
-	// Asks for price. If statement checks for valid input data type.
-	std::cout << "Price: "; 
-	std::cin >> price;
-	if (std::cin.fail() == true){
-		do{ 
-			std::cin.clear();
-			std::cin.ignore();
-			std::cout << "Please enter a valid price:";
-			std::cin >> price;
-		} while (std::cin.fail() == true);
-	}
+// Asks for ISBN. Check not necessary because it is a string.
+cout << "ISBN: ";
+cin.ignore();
+getline(std::cin, isbn);
 
-	// Calculates total price and tax.
-	total = qty * price;
-	tax = 0.06 * total;
+// Asks for title. Check not necessary because it is a string.
+cout << "Title: ";
+getline(std::cin, title);
 
-	// Receipt printing.
-	system("clear");
-	std::cout
-  	<< "===================================================================================\n"
-	<< "= Serendipity Book Sellers                                                        =\n"
-	<< "= Date: " << setw(7) << date << "                                                                   =\n"
-	<< std::left << setw(7) << "= Qty"	<< std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total      =\n";
-	std::cout	
-	<< "===================================================================================\n";
-	std::cout 
-	<< "= " << std::left << setw(5) << qty	<< std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " " << "=\n";
+// Asks for price. If statement checks for valid input data type.
+cout << "Price: ";
+cin >> price;
+if (cin.fail() == true){
+        do{
+                cin.clear();
+                cin.ignore();
+                cout << "Please enter a valid price:";
+                cin >> price;
+        } while (cin.fail() == true);
+}
 
-	std::cout
-	<< "=                                                                                 =\n";
+// Calculates total price and tax.
+total = qty * price;
+tax = 0.06 * total;
 
+// Receipt printing.
 
-	std::cout 
-	<< "=" << setw(58) << "   " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " " << "=\n";
-	std::cout
-	<< "=" << setw(58) << "   " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << tax << setw(2) << " " << "=\n";
-	std::cout
-	<< "=" << setw(58) << "   " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << (total + tax) << setw(2) << " " << "=\n";
- 	std::cout
-	<< "===================================================================================\n";
+system("clear");
+cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                            Serendipity Booksellers                             ▐\n";
+cout << "▌ Date: " << setw(7) << date << "                                                                  ▐\n";
+cout << left << setw(9) << "▌ Qty"      << std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌ " << std::left << setw(5) << qty     << std::left << setw(14) << isbn << std::left << setw(38) << title << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << price << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " ▐\n";
+cout << "▌                                                                                ▐\n";
 
+cout << "▌" << setw(58) << "   " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " ▐\n";
+cout << "▌" << setw(58) << "   " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << tax << setw(2) << " ▐\n";
+cout << "▌" << setw(58) << "   " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << (total + tax) << setw(2) << " ▐\n";
+cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
 
-	std::cout << "\nThank You for Shopping at Serendipity! \n\n";
+cout << "\nThank You for Shopping at Serendipity! \n\n";
 
-	// Queries user for further transactions.
-	std::cout << "Would you like to make another transaction? (Y/N):";
-	std::cin >> choice;
-	std::cout << "\n";
-	// Check for lowercase input.
-	choice = std::toupper(choice);
-	std::cin.ignore();
+// Queries user for further transactions.
+cout << "Would you like to make another transaction? (Y/N):";
+cin >> choice;
+cout << "\n";
 
-	// Check for inputs other than Y or N.
-	if (choice != 'Y' && choice != 'N'){
-		do{ 
-			std::cout << "Please enter Y or N:";
-			std::cin >> choice;
-			choice = std::toupper(choice);
-			std::cin.ignore();
-		} while (choice != 'Y' && choice != 'N');
-	}
-	} while (choice == 'Y');
-	return;
+// Check for lowercase input.
+choice = std::toupper(choice);
+cin.ignore();
+
+// Check for inputs other than Y or N.
+if (choice != 'Y' && choice != 'N'){
+        do{
+                std::cout << "Please enter Y or N:";
+                std::cin >> choice;
+                choice = std::toupper(choice);
+                std::cin.ignore();
+        } while (choice != 'Y' && choice != 'N');
+}
+} while (choice == 'Y');
+return;
 }
