@@ -1,4 +1,3 @@
-//Kyle - presenting / doing bookInfo.cpp
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -7,15 +6,23 @@ using namespace std;
 
 void bookInfo(bookType array[], int bookIndex){
 
-	cout << "\n" << "Book Title:------------------------------------------ > " << array[bookIndex].bookTitle << endl;
-	cout << "ISBN:------------------------------------------------ > " << array[bookIndex].isbn << endl;
-	cout << "Author:---------------------------------------------- > " << array[bookIndex].author << endl;
-	cout << "Publisher:------------------------------------------- > " << array[bookIndex].publisher << endl;
-	cout << "Date Added:------------------------------------------ > " << array[bookIndex].dateAdded << endl;
-	cout << "Quantity on Hand:------------------------------------ > " << array[bookIndex].qtyOnHand << endl;
-	cout << "Wholesale:------------------------------------------- > " << array[bookIndex].wholesale << endl;
-	cout << "Retail:---------------------------------------------- > " << array[bookIndex].retail << endl;
-	
+cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                            Serendipity Booksellers                             ▐\n";
+cout << "▌                               Book Information                                 ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌ Book Title                        : --- " << setw(39) << array[bookIndex].bookTitle << "▐\n";
+cout << "▌ ISBN                              : --- " << setw(39) << array[bookIndex].isbn << "▐\n";
+cout << "▌ Author                            : --- " << setw(39) << array[bookIndex].author << "▐\n";
+cout << "▌ Publisher                         : --- " << setw(39) << array[bookIndex].publisher << "▐\n";
+cout << "▌ Date Added <MM/DD/YYYY>           : --- " << setw(39) << array[bookIndex].dateAdded << "▐\n";
+cout << "▌ Quantity on Hand                  : --- " << setw(39) << array[bookIndex].qtyOnHand << "▐\n";
+cout << "▌ Wholesale Price                   : --- " << setw(39) << array[bookIndex].wholesale << "▐\n";
+cout << "▌ Retail Price                      : --- " << setw(39) << array[bookIndex].retail << "▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▌                                                                                ▐\n";
+cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
+
 return;
 }
-//I think it works, I hope it works, rehualed version with better borders
