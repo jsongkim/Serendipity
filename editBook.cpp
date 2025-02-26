@@ -37,6 +37,13 @@ cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄�
 cout << "Search:";
 index = lookUpBook(array, count);
 
+if(index == -1){
+        cout << "Press ENTER to continue..." << endl;
+        cin.ignore();
+        cin.get();
+        return count;
+}
+
 
 cout << "Is this the book you want to edit? <Y/N>: ";
 do{
