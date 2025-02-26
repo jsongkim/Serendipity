@@ -17,19 +17,19 @@ int bookCount = 0;
 do{
 system("clear");
 
-cout << "▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                            Serendipity Booksellers                             ▐\n";
-cout << "▌                                   Main Menu                                    ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌ 1. Cashier Module                                                              ▐\n";
-cout << "▌ 2. Inventory Database Module                                                   ▐\n";
-cout << "▌ 3. Reports Module                                                              ▐\n";
-cout << "▌ 4. Exit                                                                        ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▌                                                                                ▐\n";
-cout << "▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟\n";
+cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+cout << "                                                                                \n";
+cout << "                                                                                \n";
+cout << "                            Serendipity Booksellers                             \n";
+cout << "                                   Main Menu                                    \n";
+cout << "                                                                                \n";
+cout << " 1. Cashier Module                                                              \n";
+cout << " 2. Inventory Database Module                                                   \n";
+cout << " 3. Reports Module                                                              \n";
+cout << " 4. Exit                                                                        \n";
+cout << "                                                                                \n";
+cout << "                                                                                \n";
+cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
 
 cout << left << "\nEnter your choice: ";
 cin >> Choice;
