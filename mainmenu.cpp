@@ -22,6 +22,7 @@ cout << "▌                                                                    
 cout << "▌                                                                                ▐\n";
 cout << "▌                            Serendipity Booksellers                             ▐\n";
 cout << "▌                                   Main Menu                                    ▐\n";
+cout << "▌                                                                                ▐\n";
 cout << "▌ 1. Cashier Module                                                              ▐\n";
 cout << "▌ 2. Inventory Database Module                                                   ▐\n";
 cout << "▌ 3. Reports Module                                                              ▐\n";
