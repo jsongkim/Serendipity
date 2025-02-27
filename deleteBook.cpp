@@ -8,7 +8,6 @@ using namespace std;
 
 int deleteBook(bookType array[], int count)
 {
-
         system("clear");
         int index = -1;
         char choice;
