@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <string>
 #include "bookType.h"
+#include "lookUpBook.h"
 
 using namespace std;
 
