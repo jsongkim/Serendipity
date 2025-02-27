@@ -2,8 +2,8 @@
 #include "addBook.cpp"
 #include "lookUpBook.cpp"
 #include "bookInfo.cpp"
-#include "deleteBook.cpp"
-#include "editBook.cpp"
+#include "deleteBook.h"
+#include "editBook.h"
 #include <iomanip>
 #include <iostream>
 using namespace std;
