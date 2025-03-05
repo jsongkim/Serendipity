@@ -1,6 +1,6 @@
 all: mainmenu
 
-mainmenu: mainmenu.cpp cashier.o invmenu.o reports.o
+mainmenu: mainmenu.cpp cashier.o invmenu.o reports.o editBook.o deleteBook.o
 	g++ -std=c++20 -Wall -Werror -o mainmenu mainmenu.cpp cashier.o invmenu.o reports.o editBook.o deleteBook.o
 
 cashier.o: cashier.cpp
