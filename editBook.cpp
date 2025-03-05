@@ -56,14 +56,14 @@ do{
         }
 }while(!(choice == 'Y') && !(choice == 'N'));
 if(choice == 'Y') {
-        tempTitle = array[index].bookTitle;
-        tempISBN = array[index].isbn;
-        tempAuthor = array[index].author;
-        tempPub = array[index].publisher;
-        tempDate = array[index].dateAdded;
-        tempQty = array[index].qtyOnHand;
-        tempWhole = array[index].wholesale;
-        tempRetail = array[index].retail;
+        tempTitle = array[index].getTitle();
+        tempISBN = array[index].getISBN();
+        tempAuthor = array[index].getAuthor();
+        tempPub = array[index].getPub();
+        tempDate = array[index].getDateAdded();
+        tempQty = array[index].getQtyOnHand();
+        tempWhole = array[index].getWholesale();
+        tempRetail = array[index].getRetail();
         do{
                 system("clear");
                 cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
@@ -157,14 +157,14 @@ switch (choice2){
     }
     break;
   case '9':
-    array[index].bookTitle = tempTitle;
-    array[index].isbn = tempISBN;
-    array[index].author = tempAuthor;
-    array[index].publisher = tempPub;
-    array[index].dateAdded = tempDate;
-    array[index].qtyOnHand = tempQty;
-    array[index].wholesale = tempWhole;
-    array[index].retail = tempRetail;
+    array[index].setTitle(tempTitle);
+    array[index].setISBN(tempISBN);
+    array[index].setAuthor(tempAuthor);
+    array[index].setPub(tempPub);
+    array[index].setDateAdded(tempDate);
+    array[index].setQtyOnHand(tempQty);
+    array[index].setWholesale(tempWhole);
+    array[index].setRetail(tempRetail);
     break;
   case '0':
     return count;

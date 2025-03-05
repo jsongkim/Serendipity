@@ -25,11 +25,11 @@ int lookUpBook(bookType array[], int bookCount){
          for(int g = 0; g < bookCount; g++)
          {
              bookIndex = g;
-             tempTitle = array[g].bookTitle;
+             tempTitle = array[g].getTitle();
              transform(tempTitle.begin(), tempTitle.end(), tempTitle.begin(), ::tolower);
-             for(size_t i = 0; i <= array[g].bookTitle.size() - titleLength; i++)
+             for(size_t i = 0; i <= array[g].getTitle().size() - titleLength; i++)
              {
-                   if(titleLength > array[g].bookTitle.size())
+                   if(titleLength > array[g].getTitle().size())
                    {
                         break;
                    }
@@ -44,7 +44,7 @@ int lookUpBook(bookType array[], int bookCount){
                    }
                    if(match)
                    {
-                          cout << "\n" << "RESULT>: " << array[g].bookTitle << endl;
+                          cout << "\n" << "RESULT>: " << array[g].getTitle() << endl;
                           cout << "View this book record? <Y/N>: ";
                           do{
                                   cin >> choice;

@@ -1,6 +1,8 @@
 #ifndef CASHIER_H
 #define CASHIER_H
 
-void cashier();
+#include "bookType.h"
+
+int cashier(bookType array[], int bookCount);
 
 #endif

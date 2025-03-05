@@ -37,11 +37,13 @@ cin >> Choice;
 // Switch statement for menu.
 switch (Choice) {
 case '1':
-        cout << "\n" << "You selected item: 1" << endl;
-        cout << "Press ENTER to continue..." << endl;
-        cin.ignore();
-        cin.get();
-        cashier();
+        if (bookCount > 0) {
+                cout << "\n" << "You selected item: 1" << endl;
+                cout << "Press ENTER to continue..." << endl;
+                cin.ignore();
+                cin.get();
+                cashier(array, bookCount);
+        }
         break;
 case '2':
         bookCount = invmenu(array, bookCount);

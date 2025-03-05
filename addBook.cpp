@@ -115,14 +115,14 @@ switch (choice2){
                 }
                 break;
         case '9':
-                array[count].bookTitle = tempTitle;
-                array[count].isbn = tempISBN;
-                array[count].author = tempAuthor;
-                array[count].publisher = tempPub;
-                array[count].dateAdded = tempDate;
-                array[count].qtyOnHand = tempQty;
-                array[count].wholesale = tempWhole;
-                array[count].retail = tempRetail;
+                array[count].setTitle(tempTitle);
+                array[count].setISBN(tempISBN);
+                array[count].setAuthor(tempAuthor);
+                array[count].setPub(tempPub);
+                array[count].setDateAdded(tempDate);
+                array[count].setQtyOnHand(tempQty);
+                array[count].setWholesale(tempWhole);
+                array[count].setRetail(tempRetail);
                 count++;
                 break;
         case '0':
