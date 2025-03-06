@@ -1,9 +1,7 @@
 #ifndef BOOKTYPE_H
 #define BOOKTYPE_H
 #include <iostream>
-#include <iostream>
 #include <string>
-#include <iomanip>
 #include <iomanip>
 using namespace std;
 
