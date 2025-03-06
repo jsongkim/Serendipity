@@ -2,7 +2,6 @@
 #include <cstring>
 #include <bits/stdc++.h>
 #include <cctype>
-#include "bookType.h"
 #include "lookUpBook.h"
 using namespace std;
 
@@ -44,9 +43,10 @@ int lookUpBook(bookType array[], int bookCount){
                    }
                    if(match)
                    {
-                          cout << "\n" << "RESULT>: " << array[g].getTitle() << endl;
-                          cout << "View this book record? <Y/N>: ";
+
                           do{
+                                  cout << "\n" << "RESULT>: " << array[g].getTitle() << endl;
+                                  cout << "View this book record? <Y/N>: ";
                                   cin >> choice;
                                   choice = toupper(choice);
                                   cout << "\n"; 
@@ -55,6 +55,9 @@ int lookUpBook(bookType array[], int bookCount){
                                   {
                                           cout << "'" << choice << "'" << " is not a valid input" << endl;
                                           cout << "Please only enter " << "Y" << " or " << "N" << endl;
+                                          cout << "Press any button to continue" << endl;
+                                          cin.ignore();
+                                          cin.get();
                                   }
                             }while(!(choice == 'Y') && !(choice == 'N'));
                             break;
