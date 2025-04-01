@@ -7,134 +7,249 @@
 #include <algorithm>
 using namespace std;
 
+/**
+ * @file cashier.cpp
+ * @brief Implementation of the cashier module for Serendipity Booksellers
+ */
+
+#include <string>
+#include <iomanip>
+#include <iostream>
+#include <ctime>
+#include "bookType.h"
+#include "lookUpBook.h"
+#include <algorithm>
+using namespace std;
+
+/**
+ * @brief Processes customer purchases and generates receipts
+ * 
+ * @param array Array of bookType objects representing inventory
+ * @param bookCount Current number of books in inventory
+ * @return Updated count of books in inventory after purchases
+ */
 int cashier(bookType array[], int bookCount) {
+    string date;
+    float grandTotal = 0.0;
+    
+    const int MAX_PURCHASES = 100;
+    int purchaseIndices[MAX_PURCHASES] = {0};
+    int purchaseQuantities[MAX_PURCHASES] = {0};
+    int purchaseCount = 0;
+    
+    // Get current date
+    time_t now = time(0);
+    tm* localTime = localtime(&now);
+    date = to_string(1 + localTime->tm_mon) + "/" +
+           to_string(localTime->tm_mday) + "/" +
+           to_string(1900 + localTime->tm_year);
 
-int index = 0;
-// Variable declaration. Sets choice to 'Y' by default to facilitate loop.
-string date;
-int qty;
-float total;
-float tax;
-char choice = 'Y';
-int holdPurchase[bookCount];
-int holdQty[bookCount];
-float grandTotal;
-int i = 0;
-int j = 0;
-int w = 0;
+    system("clear");
+    cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+    cout << "                            Serendipity Booksellers                             \n";
+    cout << "                                Cashier Module                                  \n";
+    cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
 
-std::fill_n(holdPurchase, bookCount, -1);
-// Do while loop for menu.
+    // Main shopping loop
+    bool continueShopping = true;
+    while (continueShopping) {
+        cout << "\nWhat book will you be purchasing today?" << endl;
+        int index = lookUpBook(array, bookCount);
+        if (index == -1) {
+            cout << "Book not found. Press ENTER to continue" << endl;
+            cin.get();
+            break;
+        }
+
+        if (array[index].getQtyOnHand() <= 0) {
+            cout << "This book is currently out of stock.\n";
+            continue;
+        }
+
+        // Calculate available quantity considering current cart
+        int availableQty = array[index].getQtyOnHand();
+        for (int i = 0; i < purchaseCount; i++) {
+            if (purchaseIndices[i] == index) {
+                availableQty -= purchaseQuantities[i];
+                break;
+            }
+        }
+
+        int qty = 0;
+        cout << "Quantity of Book (Available: " << availableQty << "): ";
+        cin >> qty;
+        while (cin.fail() || qty <= 0 || qty > availableQty) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            if (qty > availableQty) {
+                cout << "Only " << availableQty << " copies available. Please enter a valid quantity: ";
+            } else {
+                cout << "Please enter a valid quantity: ";
+            }
+            cin >> qty;
+        }
+
+        // Add to cart
+        bool found = false;
+        for (int i = 0; i < purchaseCount; i++) {
+            if (purchaseIndices[i] == index) {
+                purchaseQuantities[i] += qty;
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            purchaseIndices[purchaseCount] = index;
+            purchaseQuantities[purchaseCount] = qty;
+            purchaseCount++;
+        }
+
+        cout << "\nAdded to cart: " << qty << " x " << array[index].getTitle() << endl;
+
+        // Cart management menu
+        int menuChoice;
+        do {
+				cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+            cout << "1. Continue shopping\n";
+            cout << "2. View cart\n";
+            cout << "3. Proceed to checkout\n";
+		      cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\n";
+
+            cout << "Enter your choice: ";
+
+            cin >> menuChoice;
+
+            if (menuChoice == 2) {
+                system("clear");
+                cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+                cout << "                                YOUR SHOPPING CART                              \n";
+                cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
+                
+                float cartTotal = 0.0;
+                for (int i = 0; i < purchaseCount; i++) {
+                    int index = purchaseIndices[i];
+                    int qty = purchaseQuantities[i];
+                    float price = array[index].getRetail();
+                    float itemTotal = qty * price;
+                    cartTotal += itemTotal;
+
+                    cout << " " << left << setw(5) << qty 
+                         << left << setw(38) << array[index].getTitle() 
+                         << left << setw(3) << "$ " << left << setw(9) << fixed << setprecision(2) << price 
+                         << left << setw(3) << "$ " << left << setw(6) << fixed << setprecision(2) << itemTotal 
+                         << "\n";
+                }
+                cout << "\nCart Total: $" << fixed << setprecision(2) << cartTotal << endl;
+                
+					 cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+                cout << "1. Continue shopping\n";
+                cout << "2. View cart\n";
+                cout << "3. Proceed to checkout\n";
+		          cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\n";
+
+                cout << "Enter your choice: ";
+                cin >> menuChoice;
+                
+                if (menuChoice == 3) {
+                    cout << "Enter item number to remove (1-" << purchaseCount << "): ";
+                    int itemToRemove;
+                    cin >> itemToRemove;
+                    if (itemToRemove >= 1 && itemToRemove <= purchaseCount) {
+                        for (int i = itemToRemove-1; i < purchaseCount-1; i++) {
+                            purchaseIndices[i] = purchaseIndices[i+1];
+                            purchaseQuantities[i] = purchaseQuantities[i+1];
+                        }
+                        purchaseCount--;
+                        cout << "Item removed from cart.\n";
+                    }
+                }
+            }
+        } while (menuChoice == 2);
+
+        if (menuChoice == 3) {
+            continueShopping = false;
+        }
+    }
+
+    // Checkout process
+    if (purchaseCount > 0) {
         system("clear");
         cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
-        cout << "                                                                                \n";
-        cout << "                                                                                \n";
-        cout << "                            Serendipity Booksellers                             \n";
-        cout << "                                Cashier Module                                  \n";
-        cout << "                                                                                 \n";
-        cout << "                                                                                \n";
+        cout << "                              REVIEW YOUR ORDER                                \n";
         cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
+        
+        float subtotal = 0.0;
+        for (int i = 0; i < purchaseCount; i++) {
+            int index = purchaseIndices[i];
+            int qty = purchaseQuantities[i];
+            float price = array[index].getRetail();
+            float itemTotal = qty * price;
+            subtotal += itemTotal;
 
-        do{
+            cout << " " << left << setw(5) << qty 
+                 << left << setw(38) << array[index].getTitle() 
+                 << left << setw(3) << "$ " << left << setw(9) << fixed << setprecision(2) << price 
+                 << left << setw(3) << "$ " << left << setw(6) << fixed << setprecision(2) << itemTotal 
+                 << "\n";
+        }
+        
+        float tax = 0.06 * subtotal;
+        grandTotal = subtotal + tax;
+        
+        cout << "\nSubtotal: $" << fixed << setprecision(2) << subtotal << endl;
+        cout << "Tax: $" << fixed << setprecision(2) << tax << endl;
+        cout << "Total: $" << fixed << setprecision(2) << grandTotal << endl;
+        
+        char confirm;
+        cout << "\nConfirm purchase? <Y/N>: ";
+        cin >> confirm;
+        confirm = toupper(confirm);
+        while (confirm != 'Y' && confirm != 'N') {
+            cout << "Please enter Y or N: ";
+            cin >> confirm;
+            confirm = toupper(confirm);
+        }
 
-                // Get the current time as a time_t object
-                time_t now = time(0);
+        if (confirm == 'Y') {
+            system("clear");
+            cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
+            cout << "                            Serendipity Booksellers                             \n";
+            cout << " Date: " << setw(7) << date << "                                                                  \n";
+            cout << left << setw(9) << " Qty" << left << setw(14) << "ISBN" << left << setw(38) << "Title" 
+                 << left << setw(12) << "Price" << left << setw(8) << "Total     \n";
+            cout << "                                                                                \n";
 
-                // Convert it to a tm structure representing local time
-                tm* localTime = localtime(&now);
+            for (int i = 0; i < purchaseCount; i++) {
+                int index = purchaseIndices[i];
+                int qty = purchaseQuantities[i];
+                array[index].setQtyOnHand(array[index].getQtyOnHand() - qty);
 
-                // Format the date as MM/DD/YYYY
-                date = to_string(1 + localTime->tm_mon) + "/" +
-                     to_string(localTime->tm_mday) + "/" +
-                     to_string(1900 + localTime->tm_year);
+                cout << " " << left << setw(5) << qty 
+                     << left << setw(14) << array[index].getISBN() 
+                     << left << setw(38) << array[index].getTitle() 
+                     << left << setw(3) << "$ " << left << setw(9) << fixed << setprecision(2) << array[index].getRetail() 
+                     << left << setw(3) << "$ " << left << setw(6) << fixed << setprecision(2) << (qty * array[index].getRetail()) 
+                     << setw(2) << " \n";
+            }
 
-                                cout << "What book(s) will you be purchasing today?" << endl;
-                                index = lookUpBook(array, bookCount);
-                                if(index == -1)
-                                {
-                                        cout << "Press any button to continue" << endl;
-               cin.get();
-                                        break;
-                                }
+            cout << "                                                                                \n";
+            cout << "" << setw(58) << "   " << left << setw(12) << "Subtotal" << left << setw(3) << "$ " 
+                 << left << setw(6) << fixed << setprecision(2) << subtotal << setw(2) << " \n";
+            cout << "" << setw(58) << "   " << left << setw(12) << "Tax" << left << setw(3) << "$ " 
+                 << left << setw(6) << fixed << setprecision(2) << tax << setw(2) << " \n";
+            cout << "" << setw(58) << "   " << left << setw(12) << "Total" << left << setw(3) << "$ " 
+                 << left << setw(6) << fixed << setprecision(2) << grandTotal << setw(2) << " \n";
+            cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
+            cout << "\nThank You for Shopping at Serendipity! \n\n";
+        }
+        else {
+            cout << "\nOrder cancelled. No changes have been made to inventory.\n";
+        }
+    }
 
-                        holdPurchase[i] = index;
-
-                // Asks for quantity. If statement checks for valid input data type.
-                cout << "Quantity of Book: ";
-                cin >> qty;
-                if (cin.fail() == true){
-                do{
-                cin.clear();
-                cin.ignore();
-                cout << "Please enter a valid quantity:";
-                cin >> qty;
-                }while (std::cin.fail() == true);
-                }
-
-                        holdQty[j] = qty;
-
-                cout << "\n" << "Purchase Request: " << qty << " x " << array[index].getTitle() << endl;
-
-                // Queries user for further transactions.
-                cout << "\n" << "Would you like to make another transaction? (Y/N):";
-                cin >> choice;
-                cout << "\n";
-
-                // Check for lowercase input.
-                choice = std::toupper(choice);
-                cin.ignore();
-
-                // Check for inputs other than Y or N.
-                if (choice != 'Y' && choice != 'N'){
-                do{
-                std::cout << "Please enter Y or N:";
-                std::cin >> choice;
-                choice = std::toupper(choice);
-                std::cin.ignore();
-                }while (choice != 'Y' && choice != 'N');
-                }
-
-                // Calculates total price and tax.
-                total = qty * array[index].getRetail();
-                tax = 0.06 * total;
-
-                // Receipt printing.
-                if(choice == 'N')
-                {
-                        system("clear");
-                        while(holdPurchase[w] != -1)
-                        {
-                        cout << "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀\n";
-                        cout << "                                                                                \n";
-                        cout << "                                                                                \n";
-                        cout << "                            Serendipity Booksellers                             \n";
-                        cout << " Date: " << setw(7) << date << "                                                                  \n";
-                        cout << left << setw(9) << " Qty"      << std::left << setw(14) << "ISBN" << std::left << setw(38) << "Title" << std::left << setw(12) << "Price" << std::left << setw(8) << "Total     \n";
-                        cout << "                                                                                \n";
-                        cout << " " << std::left << setw(5) << holdQty[w] << std::left << setw(14) << array[index].getISBN() << std::left << setw(38) << array[holdPurchase[w]].getTitle() << std::left << setw(3) << "$ " << std::left << setw(9) << setprecision(2) << std::fixed << array[index].getRetail() << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " \n";
-                        cout << "                                                                                \n";
-
-                        cout << "" << setw(58) << "   " << std::left << setw(12) << "Subtotal" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << total << setw(2) << " \n";
-                        cout << "" << setw(58) << "   " << std::left << setw(12) << "Tax" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << tax << setw(2) << " \n";
-                        cout << "" << setw(58) << "   " << std::left << setw(12) << "Total" << std::left << setw(3) << "$ " << std::left << setw(6) << setprecision(2) << std::fixed << (total + tax) << setw(2) << " \n";
-                        cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n";
-                        grandTotal += (total + tax);
-                        w++;
-                        }
-                        cout << "Grand Total: " << grandTotal;
-                        cout << "\nThank You for Shopping at Serendipity! \n\n";
-
-                        array[index].setQtyOnHand(array[index].getQtyOnHand() - qty);
-
-                        if (array[index].getQtyOnHand() <= 0) {
-                        array[index] = array[(bookCount - 1)];
-                        bookCount = bookCount - 1;
-                        }
-                        cout << "Press any button to continue" << endl;
-         cin.get();
-                }
-                i++;
-                j++;
-                }while (choice == 'Y');
-        return bookCount;
+    cout << "Press ENTER to continue" << endl;
+    cin.ignore();
+    cin.get();
+    return bookCount;
 }

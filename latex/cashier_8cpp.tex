@@ -1,0 +1,47 @@
+\hypertarget{cashier_8cpp}{}\doxysection{cashier.\+cpp File Reference}
+\label{cashier_8cpp}\index{cashier.cpp@{cashier.cpp}}
+
+
+Implementation of the cashier module for Serendipity Booksellers.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}look\+Up\+Book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cashier_8cpp_ad027322e4bbad829310f7dd0c2aeb515}{cashier}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int book\+Count)
+\begin{DoxyCompactList}\small\item\em Processes customer purchases and generates receipts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the cashier module for Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cashier_8cpp_ad027322e4bbad829310f7dd0c2aeb515}\label{cashier_8cpp_ad027322e4bbad829310f7dd0c2aeb515}} 
+\index{cashier.cpp@{cashier.cpp}!cashier@{cashier}}
+\index{cashier@{cashier}!cashier.cpp@{cashier.cpp}}
+\doxysubsubsection{\texorpdfstring{cashier()}{cashier()}}
+{\footnotesize\ttfamily int cashier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{book\+Count }\end{DoxyParamCaption})}
+
+
+
+Processes customer purchases and generates receipts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing inventory \\
+\hline
+{\em book\+Count} & Current number of books in inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated count of books in inventory after purchases 
+\end{DoxyReturn}

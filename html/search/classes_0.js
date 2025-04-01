@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['booktype_0',['bookType',['../structbookType.html',1,'']]]
+  ['booktype_0',['bookType',['../classbookType.html',1,'']]]
 ];
