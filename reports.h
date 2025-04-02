@@ -18,6 +18,6 @@
  * for report generation options. Currently serves as a placeholder for future
  * report implementations.
  */
-void reports();
+void reports(bookType array[]);
 
 #endif
