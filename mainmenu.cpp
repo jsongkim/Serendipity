@@ -9,7 +9,7 @@ using namespace std;
 int main() {
 
 // Variable and array declaration.
-char Choice;
+char Choice = '5';
 bookType array[20] = {};
 int bookCount = 0;
 
