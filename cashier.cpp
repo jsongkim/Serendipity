@@ -59,8 +59,9 @@ int cashier(bookType array[], int bookCount) {
     while (continueShopping) {
         cout << "\nWhat book will you be purchasing today?" << endl;
         int index = lookUpBook(array, bookCount);
-        if (index == -1) {
-            break;
+        while (index == -1) {
+            cout << "Please enter another book." << endl;
+            index = lookUpBook(array, bookCount);
         }
 
         // Check stock availability
