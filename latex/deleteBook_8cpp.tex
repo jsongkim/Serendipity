@@ -1,0 +1,61 @@
+\hypertarget{deleteBook_8cpp}{}\doxysection{delete\+Book.\+cpp File Reference}
+\label{deleteBook_8cpp}\index{deleteBook.cpp@{deleteBook.cpp}}
+
+
+Implementation of the book deletion module for Serendipity Booksellers.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}book\+Info.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}look\+Up\+Book.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{deleteBook_8cpp_a4dad30a004f7462eb751d336d8054a0b}{delete\+Book}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int count)
+\begin{DoxyCompactList}\small\item\em Deletes a book from the inventory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the book deletion module for Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{deleteBook_8cpp_a4dad30a004f7462eb751d336d8054a0b}\label{deleteBook_8cpp_a4dad30a004f7462eb751d336d8054a0b}} 
+\index{deleteBook.cpp@{deleteBook.cpp}!deleteBook@{deleteBook}}
+\index{deleteBook@{deleteBook}!deleteBook.cpp@{deleteBook.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteBook()}{deleteBook()}}
+{\footnotesize\ttfamily int delete\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Deletes a book from the inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em count} & Current number of books in inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated count of books after deletion
+\end{DoxyReturn}
+This function provides an interactive interface for\+:
+\begin{DoxyItemize}
+\item Searching for books to delete
+\item Confirming deletion choices
+\item Removing books from inventory
+\item Maintaining inventory integrity
+\end{DoxyItemize}
+
+The function handles\+:
+\begin{DoxyItemize}
+\item User confirmation prompts
+\item Input validation
+\item Proper array management when deleting items
+\item Multiple deletions in one session 
+\end{DoxyItemize}

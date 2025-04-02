@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Serendipity: bookInfo.cpp File Reference</title>
+<title>Serendipity: bookInfo.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,25 +72,24 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">bookInfo.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">bookInfo.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Implementation of the book information display module for Serendipity Booksellers.  
+<p>Header file for the book information display module.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;iomanip&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &quot;<a class="el" href="bookType_8h_source.html">bookType.h</a>&quot;</code><br />
-</div><table class="memberdecls">
+<div class="textblock"><code>#include &quot;<a class="el" href="bookType_8h_source.html">bookType.h</a>&quot;</code><br />
+</div>
+<p><a href="bookInfo_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab00df8a86ee3f4279c593c28794729aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bookInfo_8cpp.html#ab00df8a86ee3f4279c593c28794729aa">bookInfo</a> (<a class="el" href="classbookType.html">bookType</a> array[], int bookIndex)</td></tr>
+<tr class="memitem:ab00df8a86ee3f4279c593c28794729aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bookInfo_8h.html#ab00df8a86ee3f4279c593c28794729aa">bookInfo</a> (<a class="el" href="classbookType.html">bookType</a> array[], int bookIndex)</td></tr>
 <tr class="memdesc:ab00df8a86ee3f4279c593c28794729aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays detailed information about a specific book.  <br /></td></tr>
 <tr class="separator:ab00df8a86ee3f4279c593c28794729aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementation of the book information display module for Serendipity Booksellers. </p>
+<div class="textblock"><p>Header file for the book information display module. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab00df8a86ee3f4279c593c28794729aa" name="ab00df8a86ee3f4279c593c28794729aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab00df8a86ee3f4279c593c28794729aa">&#9670;&#160;</a></span>bookInfo()</h2>
@@ -119,6 +118,24 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Displays detailed information about a specific book. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>Array of <a class="el" href="classbookType.html" title="Represents a book in the inventory system.">bookType</a> objects representing the inventory </td></tr>
+    <tr><td class="paramname">bookIndex</td><td>Index of the book in the array to display information for</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function displays a formatted view of all information for a specific book, including:</p><ul>
+<li>Title</li>
+<li>ISBN</li>
+<li>Author</li>
+<li>Publisher</li>
+<li>Date added</li>
+<li>Quantity on hand</li>
+<li>Wholesale price</li>
+<li>Retail price</li>
+</ul>
+<p>The information is presented in a clean, formatted layout with borders for visual clarity. No modifications to the book data are performed by this function - it is read-only.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">array</td><td>Array of <a class="el" href="classbookType.html" title="Represents a book in the inventory system.">bookType</a> objects representing the inventory </td></tr>

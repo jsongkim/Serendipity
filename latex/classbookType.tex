@@ -1,82 +1,377 @@
 \hypertarget{classbookType}{}\doxysection{book\+Type Class Reference}
 \label{classbookType}\index{bookType@{bookType}}
+
+
+Represents a book in the inventory system.  
+
+
+
+
+{\ttfamily \#include $<$book\+Type.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classbookType_a62cfda8a7367738b1957464433d3d966}\label{classbookType_a62cfda8a7367738b1957464433d3d966}} 
-{\bfseries book\+Type} (string book\+Title, string isbn, string author, string publisher, string date\+Added, int qty\+On\+Hand, float wholesale, float retail)
-\item 
-\mbox{\Hypertarget{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}\label{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}} 
-string {\bfseries get\+Title} () const
-\item 
-\mbox{\Hypertarget{classbookType_a418a977aeae25030260f7e7f74fc8146}\label{classbookType_a418a977aeae25030260f7e7f74fc8146}} 
-string {\bfseries get\+ISBN} () const
-\item 
-\mbox{\Hypertarget{classbookType_a2bd297763f452fea4eb34165ba07ee45}\label{classbookType_a2bd297763f452fea4eb34165ba07ee45}} 
-string {\bfseries get\+Author} () const
-\item 
-\mbox{\Hypertarget{classbookType_a0075a549ad9b4a866befbddbcb18dd22}\label{classbookType_a0075a549ad9b4a866befbddbcb18dd22}} 
-string {\bfseries get\+Pub} () const
-\item 
-\mbox{\Hypertarget{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}\label{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}} 
-string {\bfseries get\+Date\+Added} () const
-\item 
-\mbox{\Hypertarget{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}\label{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}} 
-int {\bfseries get\+Qty\+On\+Hand} () const
-\item 
-\mbox{\Hypertarget{classbookType_a944a4e2a15191870ee0055fb94420e29}\label{classbookType_a944a4e2a15191870ee0055fb94420e29}} 
-float {\bfseries get\+Wholesale} () const
-\item 
-\mbox{\Hypertarget{classbookType_a5e5f3991d5b55addec958aa92ae45930}\label{classbookType_a5e5f3991d5b55addec958aa92ae45930}} 
-float {\bfseries get\+Retail} () const
-\item 
-\mbox{\Hypertarget{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}\label{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}} 
-int {\bfseries get\+Book\+Count} () const
-\item 
-\mbox{\Hypertarget{classbookType_a3ab823e557dda13d3ca28405b37a22c2}\label{classbookType_a3ab823e557dda13d3ca28405b37a22c2}} 
-void {\bfseries set\+Title} (string t)
-\item 
-\mbox{\Hypertarget{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}\label{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}} 
-void {\bfseries set\+ISBN} (string i)
-\item 
-\mbox{\Hypertarget{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}\label{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}} 
-void {\bfseries set\+Author} (string a)
-\item 
-\mbox{\Hypertarget{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}\label{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}} 
-void {\bfseries set\+Pub} (string p)
-\item 
-\mbox{\Hypertarget{classbookType_ae718302af6e210c3903f690f00ce3c64}\label{classbookType_ae718302af6e210c3903f690f00ce3c64}} 
-void {\bfseries set\+Date\+Added} (string d)
-\item 
-\mbox{\Hypertarget{classbookType_a8c810f408b18b53747ecdadd7c60d369}\label{classbookType_a8c810f408b18b53747ecdadd7c60d369}} 
-void {\bfseries set\+Qty\+On\+Hand} (int q)
-\item 
-\mbox{\Hypertarget{classbookType_a3c76218f56420e13e0c50823d83f86eb}\label{classbookType_a3c76218f56420e13e0c50823d83f86eb}} 
-void {\bfseries set\+Wholesale} (float w)
-\item 
-\mbox{\Hypertarget{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}\label{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}} 
-void {\bfseries set\+Retail} (float r)
-\item 
+\mbox{\Hypertarget{classbookType_a6b8b0b2a1c7ae327bfef6ad9fef187ad}\label{classbookType_a6b8b0b2a1c7ae327bfef6ad9fef187ad}} 
+{\bfseries book\+Type} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbookType_a62cfda8a7367738b1957464433d3d966}{book\+Type}} (string book\+Title, string isbn, string author, string publisher, string date\+Added, int qty\+On\+Hand, float wholesale, float retail)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}{get\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Gets book title. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbookType_a418a977aeae25030260f7e7f74fc8146}{get\+ISBN}} () const
+\begin{DoxyCompactList}\small\item\em Gets ISBN number. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbookType_a2bd297763f452fea4eb34165ba07ee45}{get\+Author}} () const
+\begin{DoxyCompactList}\small\item\em Gets author name. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbookType_a0075a549ad9b4a866befbddbcb18dd22}{get\+Pub}} () const
+\begin{DoxyCompactList}\small\item\em Gets publisher name. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}{get\+Date\+Added}} () const
+\begin{DoxyCompactList}\small\item\em Gets date added to inventory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}{get\+Qty\+On\+Hand}} () const
+\begin{DoxyCompactList}\small\item\em Gets current quantity in inventory. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbookType_a944a4e2a15191870ee0055fb94420e29}{get\+Wholesale}} () const
+\begin{DoxyCompactList}\small\item\em Gets wholesale price. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classbookType_a5e5f3991d5b55addec958aa92ae45930}{get\+Retail}} () const
+\begin{DoxyCompactList}\small\item\em Gets retail price. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}{get\+Book\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Gets total count of books in inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_a3ab823e557dda13d3ca28405b37a22c2}{set\+Title}} (string t)
+\begin{DoxyCompactList}\small\item\em Sets book title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}{set\+ISBN}} (string i)
+\begin{DoxyCompactList}\small\item\em Sets ISBN number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}{set\+Author}} (string a)
+\begin{DoxyCompactList}\small\item\em Sets author name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}{set\+Pub}} (string p)
+\begin{DoxyCompactList}\small\item\em Sets publisher name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_ae718302af6e210c3903f690f00ce3c64}{set\+Date\+Added}} (string d)
+\begin{DoxyCompactList}\small\item\em Sets date added to inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_a8c810f408b18b53747ecdadd7c60d369}{set\+Qty\+On\+Hand}} (int q)
+\begin{DoxyCompactList}\small\item\em Sets quantity in inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_a3c76218f56420e13e0c50823d83f86eb}{set\+Wholesale}} (float w)
+\begin{DoxyCompactList}\small\item\em Sets wholesale price. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}{set\+Retail}} (float r)
+\begin{DoxyCompactList}\small\item\em Sets retail price. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbookType_a8cacb0534a6ad6e1019878825b1db392}\label{classbookType_a8cacb0534a6ad6e1019878825b1db392}} 
 void {\bfseries print} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints basic book information. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbookType_acadf6f43bc6738a97731fe726ec02582}\label{classbookType_acadf6f43bc6738a97731fe726ec02582}} 
 void {\bfseries book\+Info} ()
-\item 
-\mbox{\Hypertarget{classbookType_ac3c9606ff06bb8e9122ba8f292941645}\label{classbookType_ac3c9606ff06bb8e9122ba8f292941645}} 
-bool {\bfseries equals} (\mbox{\hyperlink{classbookType}{book\+Type}})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Displays detailed book information. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classbookType_a39811e1dd22c24e91734955b3731ef2d}{equals}} (\mbox{\hyperlink{classbookType}{book\+Type}} other)
+\begin{DoxyCompactList}\small\item\em Compares this book with another. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classbookType_a8dfd16d014222c5a3038961f8581ce7b}\label{classbookType_a8dfd16d014222c5a3038961f8581ce7b}} 
 static void {\bfseries inc\+Book\+Count} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Increments the static book count. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classbookType_af951a0d9068fa7204d61fbdb957927b3}\label{classbookType_af951a0d9068fa7204d61fbdb957927b3}} 
 static void {\bfseries dec\+Book\+Count} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Decrements the static book count. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a book in the inventory system. 
+
+This class stores all information about a book including\+:
+\begin{DoxyItemize}
+\item Title, ISBN, author, and publisher
+\item Date added to inventory
+\item Quantity on hand
+\item Wholesale and retail prices
+\item Static count of total books 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbookType_a62cfda8a7367738b1957464433d3d966}\label{classbookType_a62cfda8a7367738b1957464433d3d966}} 
+\index{bookType@{bookType}!bookType@{bookType}}
+\index{bookType@{bookType}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{bookType()}{bookType()}}
+{\footnotesize\ttfamily book\+Type\+::book\+Type (\begin{DoxyParamCaption}\item[{string}]{book\+Title,  }\item[{string}]{isbn,  }\item[{string}]{author,  }\item[{string}]{publisher,  }\item[{string}]{date\+Added,  }\item[{int}]{qty\+On\+Hand,  }\item[{float}]{wholesale,  }\item[{float}]{retail }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameterized constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em book\+Title} & Title of the book \\
+\hline
+{\em isbn} & ISBN number \\
+\hline
+{\em author} & Author name \\
+\hline
+{\em publisher} & Publisher name \\
+\hline
+{\em date\+Added} & Date added to inventory \\
+\hline
+{\em qty\+On\+Hand} & Initial quantity \\
+\hline
+{\em wholesale} & Wholesale price \\
+\hline
+{\em retail} & Retail price \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbookType_a39811e1dd22c24e91734955b3731ef2d}\label{classbookType_a39811e1dd22c24e91734955b3731ef2d}} 
+\index{bookType@{bookType}!equals@{equals}}
+\index{equals@{equals}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily bool book\+Type\+::equals (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Compares this book with another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Book to compare with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if books are identical, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_a2bd297763f452fea4eb34165ba07ee45}\label{classbookType_a2bd297763f452fea4eb34165ba07ee45}} 
+\index{bookType@{bookType}!getAuthor@{getAuthor}}
+\index{getAuthor@{getAuthor}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getAuthor()}{getAuthor()}}
+{\footnotesize\ttfamily string book\+Type\+::get\+Author (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets author name. 
+
+\begin{DoxyReturn}{Returns}
+Author as string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}\label{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}} 
+\index{bookType@{bookType}!getBookCount@{getBookCount}}
+\index{getBookCount@{getBookCount}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getBookCount()}{getBookCount()}}
+{\footnotesize\ttfamily int book\+Type\+::get\+Book\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets total count of books in inventory. 
+
+\begin{DoxyReturn}{Returns}
+Count as integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}\label{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}} 
+\index{bookType@{bookType}!getDateAdded@{getDateAdded}}
+\index{getDateAdded@{getDateAdded}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getDateAdded()}{getDateAdded()}}
+{\footnotesize\ttfamily string book\+Type\+::get\+Date\+Added (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets date added to inventory. 
+
+\begin{DoxyReturn}{Returns}
+Date as string (MM/\+DD/\+YYYY) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_a418a977aeae25030260f7e7f74fc8146}\label{classbookType_a418a977aeae25030260f7e7f74fc8146}} 
+\index{bookType@{bookType}!getISBN@{getISBN}}
+\index{getISBN@{getISBN}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getISBN()}{getISBN()}}
+{\footnotesize\ttfamily string book\+Type\+::get\+ISBN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets ISBN number. 
+
+\begin{DoxyReturn}{Returns}
+ISBN as string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_a0075a549ad9b4a866befbddbcb18dd22}\label{classbookType_a0075a549ad9b4a866befbddbcb18dd22}} 
+\index{bookType@{bookType}!getPub@{getPub}}
+\index{getPub@{getPub}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getPub()}{getPub()}}
+{\footnotesize\ttfamily string book\+Type\+::get\+Pub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets publisher name. 
+
+\begin{DoxyReturn}{Returns}
+Publisher as string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}\label{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}} 
+\index{bookType@{bookType}!getQtyOnHand@{getQtyOnHand}}
+\index{getQtyOnHand@{getQtyOnHand}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getQtyOnHand()}{getQtyOnHand()}}
+{\footnotesize\ttfamily int book\+Type\+::get\+Qty\+On\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets current quantity in inventory. 
+
+\begin{DoxyReturn}{Returns}
+Quantity as integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_a5e5f3991d5b55addec958aa92ae45930}\label{classbookType_a5e5f3991d5b55addec958aa92ae45930}} 
+\index{bookType@{bookType}!getRetail@{getRetail}}
+\index{getRetail@{getRetail}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getRetail()}{getRetail()}}
+{\footnotesize\ttfamily float book\+Type\+::get\+Retail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets retail price. 
+
+\begin{DoxyReturn}{Returns}
+Price as float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}\label{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}} 
+\index{bookType@{bookType}!getTitle@{getTitle}}
+\index{getTitle@{getTitle}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getTitle()}{getTitle()}}
+{\footnotesize\ttfamily string book\+Type\+::get\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets book title. 
+
+\begin{DoxyReturn}{Returns}
+Title as string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_a944a4e2a15191870ee0055fb94420e29}\label{classbookType_a944a4e2a15191870ee0055fb94420e29}} 
+\index{bookType@{bookType}!getWholesale@{getWholesale}}
+\index{getWholesale@{getWholesale}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{getWholesale()}{getWholesale()}}
+{\footnotesize\ttfamily float book\+Type\+::get\+Wholesale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets wholesale price. 
+
+\begin{DoxyReturn}{Returns}
+Price as float 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}\label{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}} 
+\index{bookType@{bookType}!setAuthor@{setAuthor}}
+\index{setAuthor@{setAuthor}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setAuthor()}{setAuthor()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Author (\begin{DoxyParamCaption}\item[{string}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets author name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & New author \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_ae718302af6e210c3903f690f00ce3c64}\label{classbookType_ae718302af6e210c3903f690f00ce3c64}} 
+\index{bookType@{bookType}!setDateAdded@{setDateAdded}}
+\index{setDateAdded@{setDateAdded}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setDateAdded()}{setDateAdded()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Date\+Added (\begin{DoxyParamCaption}\item[{string}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets date added to inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & New date (MM/\+DD/\+YYYY) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}\label{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}} 
+\index{bookType@{bookType}!setISBN@{setISBN}}
+\index{setISBN@{setISBN}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setISBN()}{setISBN()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+ISBN (\begin{DoxyParamCaption}\item[{string}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets ISBN number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & New ISBN \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}\label{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}} 
+\index{bookType@{bookType}!setPub@{setPub}}
+\index{setPub@{setPub}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setPub()}{setPub()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Pub (\begin{DoxyParamCaption}\item[{string}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets publisher name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & New publisher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_a8c810f408b18b53747ecdadd7c60d369}\label{classbookType_a8c810f408b18b53747ecdadd7c60d369}} 
+\index{bookType@{bookType}!setQtyOnHand@{setQtyOnHand}}
+\index{setQtyOnHand@{setQtyOnHand}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setQtyOnHand()}{setQtyOnHand()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Qty\+On\+Hand (\begin{DoxyParamCaption}\item[{int}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets quantity in inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & New quantity \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}\label{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}} 
+\index{bookType@{bookType}!setRetail@{setRetail}}
+\index{setRetail@{setRetail}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setRetail()}{setRetail()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Retail (\begin{DoxyParamCaption}\item[{float}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets retail price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & New retail price \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_a3ab823e557dda13d3ca28405b37a22c2}\label{classbookType_a3ab823e557dda13d3ca28405b37a22c2}} 
+\index{bookType@{bookType}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Title (\begin{DoxyParamCaption}\item[{string}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets book title. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & New title \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbookType_a3c76218f56420e13e0c50823d83f86eb}\label{classbookType_a3c76218f56420e13e0c50823d83f86eb}} 
+\index{bookType@{bookType}!setWholesale@{setWholesale}}
+\index{setWholesale@{setWholesale}!bookType@{bookType}}
+\doxysubsubsection{\texorpdfstring{setWholesale()}{setWholesale()}}
+{\footnotesize\ttfamily void book\+Type\+::set\+Wholesale (\begin{DoxyParamCaption}\item[{float}]{w }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets wholesale price. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & New wholesale price \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-book\+Type.\+h\end{DoxyCompactItemize}
+\mbox{\hyperlink{bookType_8h}{book\+Type.\+h}}\end{DoxyCompactItemize}

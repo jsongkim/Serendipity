@@ -1,0 +1,66 @@
+\hypertarget{cashier_8h}{}\doxysection{cashier.\+h File Reference}
+\label{cashier_8h}\index{cashier.h@{cashier.h}}
+
+
+Header file for the cashier module of Serendipity Booksellers.  
+
+
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cashier_8h_ad027322e4bbad829310f7dd0c2aeb515}{cashier}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int book\+Count)
+\begin{DoxyCompactList}\small\item\em Processes customer purchases and generates receipts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the cashier module of Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cashier_8h_ad027322e4bbad829310f7dd0c2aeb515}\label{cashier_8h_ad027322e4bbad829310f7dd0c2aeb515}} 
+\index{cashier.h@{cashier.h}!cashier@{cashier}}
+\index{cashier@{cashier}!cashier.h@{cashier.h}}
+\doxysubsubsection{\texorpdfstring{cashier()}{cashier()}}
+{\footnotesize\ttfamily int cashier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{book\+Count }\end{DoxyParamCaption})}
+
+
+
+Processes customer purchases and generates receipts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em book\+Count} & Current number of books in the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated count of books in inventory after purchases
+\end{DoxyReturn}
+This function provides the point-\/of-\/sale interface for\+:
+\begin{DoxyItemize}
+\item Adding books to a shopping cart
+\item Calculating totals with tax
+\item Generating receipts
+\item Updating inventory quantities
+\end{DoxyItemize}
+
+The function handles multiple purchases per transaction and maintains real-\/time inventory tracking. It includes validation for\+:
+\begin{DoxyItemize}
+\item Book availability
+\item Quantity limits
+\item Proper numeric input
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing inventory \\
+\hline
+{\em book\+Count} & Current number of books in inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated count of books in inventory after purchases 
+\end{DoxyReturn}

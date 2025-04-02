@@ -73,104 +73,115 @@ $(function() {
   <div class="headertitle"><div class="title">bookType.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef BOOKTYPE_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define BOOKTYPE_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using namespace </span>std;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classbookType.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="classbookType.html">bookType</a> {</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>                <span class="keywordtype">string</span> bookTitle;</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>                <span class="keywordtype">string</span> isbn;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                <span class="keywordtype">string</span> author;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <span class="keywordtype">string</span> publisher;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                <span class="keywordtype">string</span> dateAdded;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                <span class="keywordtype">int</span> qtyOnHand;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                <span class="keywordtype">float</span> wholesale;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                <span class="keywordtype">float</span> retail;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                <span class="keyword">static</span> <span class="keywordtype">int</span> bookCount;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                <span class="comment">//constructor</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                <a class="code hl_class" href="classbookType.html">bookType</a>() {}</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                <a class="code hl_class" href="classbookType.html">bookType</a>(<span class="keywordtype">string</span> bookTitle, <span class="keywordtype">string</span> isbn, <span class="keywordtype">string</span> author, <span class="keywordtype">string</span> publisher, <span class="keywordtype">string</span> dateAdded, <span class="keywordtype">int</span> qtyOnHand, <span class="keywordtype">float</span> wholesale, <span class="keywordtype">float</span> retail) {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                        this-&gt;bookTitle = bookTitle;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                        this-&gt;isbn = isbn;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                        this-&gt;author = author;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                        this-&gt;publisher = publisher;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                        this-&gt;dateAdded = dateAdded;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                        this-&gt;qtyOnHand = qtyOnHand;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>                        this-&gt;wholesale = wholesale;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                        this-&gt;retail = retail;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                }</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                <span class="comment">//getter functions</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                <span class="keywordtype">string</span> getTitle()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                        <span class="keywordflow">return</span> bookTitle;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                }</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                <span class="keywordtype">string</span> getISBN()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                        <span class="keywordflow">return</span> isbn;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                }</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordtype">string</span> getAuthor()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                        <span class="keywordflow">return</span> author;</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                }</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordtype">string</span> getPub()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                        <span class="keywordflow">return</span> publisher;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <span class="keywordtype">string</span> getDateAdded()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        <span class="keywordflow">return</span> dateAdded;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                <span class="keywordtype">int</span> getQtyOnHand()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                        <span class="keywordflow">return</span> qtyOnHand;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                <span class="keywordtype">float</span> getWholesale()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                        <span class="keywordflow">return</span> wholesale;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordtype">float</span> getRetail()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                        <span class="keywordflow">return</span> retail;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordtype">int</span> getBookCount()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                        <span class="keywordflow">return</span> bookCount;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                <span class="comment">//Setter functions</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                <span class="keywordtype">void</span> setTitle(<span class="keywordtype">string</span> t) {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                        bookTitle = t;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                <span class="keywordtype">void</span> setISBN(<span class="keywordtype">string</span> i) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                        isbn = i;</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordtype">void</span> setAuthor(<span class="keywordtype">string</span> a) {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                        author = a;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                }</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                <span class="keywordtype">void</span> setPub(<span class="keywordtype">string</span> p) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                        publisher = p;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                <span class="keywordtype">void</span> setDateAdded(<span class="keywordtype">string</span> d) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                        dateAdded = d;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                <span class="keywordtype">void</span> setQtyOnHand(<span class="keywordtype">int</span> q) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        qtyOnHand = q;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                }</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                <span class="keywordtype">void</span> setWholesale(<span class="keywordtype">float</span> w) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                        wholesale = w;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                }</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordtype">void</span> setRetail(<span class="keywordtype">float</span> r) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                        retail = r;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                <span class="keyword">static</span> <span class="keywordtype">void</span> incBookCount();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                <span class="keyword">static</span> <span class="keywordtype">void</span> decBookCount();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                <span class="comment">//Print</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>                <span class="keywordtype">void</span> print();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                <span class="keywordtype">void</span> bookInfo();</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <span class="keywordtype">bool</span> equals(<a class="code hl_class" href="classbookType.html">bookType</a>);</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>};</div>
+<a href="bookType_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef BOOKTYPE_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define BOOKTYPE_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classbookType.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classbookType.html">bookType</a> {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">string</span> bookTitle;   </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">string</span> isbn;        </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">string</span> author;      </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">string</span> publisher;  </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordtype">string</span> dateAdded;  </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">int</span> qtyOnHand;     </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">float</span> wholesale;   </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordtype">float</span> retail;      </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keyword">static</span> <span class="keywordtype">int</span> bookCount; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classbookType.html#a6b8b0b2a1c7ae327bfef6ad9fef187ad">   41</a></span>        <a class="code hl_function" href="classbookType.html#a6b8b0b2a1c7ae327bfef6ad9fef187ad">bookType</a>() {}</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classbookType.html#a62cfda8a7367738b1957464433d3d966">   54</a></span>        <a class="code hl_function" href="classbookType.html#a62cfda8a7367738b1957464433d3d966">bookType</a>(<span class="keywordtype">string</span> bookTitle, <span class="keywordtype">string</span> isbn, <span class="keywordtype">string</span> author, <span class="keywordtype">string</span> publisher, </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                <span class="keywordtype">string</span> dateAdded, <span class="keywordtype">int</span> qtyOnHand, <span class="keywordtype">float</span> wholesale, <span class="keywordtype">float</span> retail) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                this-&gt;bookTitle = bookTitle;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                this-&gt;isbn = isbn;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                this-&gt;author = author;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                this-&gt;publisher = publisher;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                this-&gt;dateAdded = dateAdded;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                this-&gt;qtyOnHand = qtyOnHand;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                this-&gt;wholesale = wholesale;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                this-&gt;retail = retail;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="comment">// Getter functions with Doxygen comments</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="classbookType.html#aa3c0c3787fbb86d20d1d3d032b9f1e40">   71</a></span><span class="comment"></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="classbookType.html#aa3c0c3787fbb86d20d1d3d032b9f1e40">getTitle</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bookTitle; }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="classbookType.html#a418a977aeae25030260f7e7f74fc8146">   77</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="classbookType.html#a418a977aeae25030260f7e7f74fc8146">getISBN</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> isbn; }</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classbookType.html#a2bd297763f452fea4eb34165ba07ee45">   83</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="classbookType.html#a2bd297763f452fea4eb34165ba07ee45">getAuthor</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> author; }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classbookType.html#a0075a549ad9b4a866befbddbcb18dd22">   89</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="classbookType.html#a0075a549ad9b4a866befbddbcb18dd22">getPub</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> publisher; }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="classbookType.html#aac9d4b92a3095ad0c222abeb40232e1a">   95</a></span>        <span class="keywordtype">string</span> <a class="code hl_function" href="classbookType.html#aac9d4b92a3095ad0c222abeb40232e1a">getDateAdded</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> dateAdded; }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassbookType_html"><div class="ttname"><a href="classbookType.html">bookType</a></div><div class="ttdef"><b>Definition:</b> bookType.h:8</div></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classbookType.html#ae7ef6bcb789a258b962aa3e1f2f2d818">  101</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classbookType.html#ae7ef6bcb789a258b962aa3e1f2f2d818">getQtyOnHand</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> qtyOnHand; }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classbookType.html#a944a4e2a15191870ee0055fb94420e29">  107</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classbookType.html#a944a4e2a15191870ee0055fb94420e29">getWholesale</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> wholesale; }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="classbookType.html#a5e5f3991d5b55addec958aa92ae45930">  113</a></span>        <span class="keywordtype">float</span> <a class="code hl_function" href="classbookType.html#a5e5f3991d5b55addec958aa92ae45930">getRetail</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> retail; }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="classbookType.html#aa1d83c3dc12e3c70a405447b2e9ae5d2">  119</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classbookType.html#aa1d83c3dc12e3c70a405447b2e9ae5d2">getBookCount</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> bookCount; }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="comment">// Setter functions with Doxygen comments</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classbookType.html#a3ab823e557dda13d3ca28405b37a22c2">  126</a></span><span class="comment"></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a3ab823e557dda13d3ca28405b37a22c2">setTitle</a>(<span class="keywordtype">string</span> t) { bookTitle = t; }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classbookType.html#ada23293030bf6bfa808ad9b1f264fd0a">  132</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#ada23293030bf6bfa808ad9b1f264fd0a">setISBN</a>(<span class="keywordtype">string</span> i) { isbn = i; }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classbookType.html#a915c7a6c6c9f7cd99fdb1f413ef1b690">  138</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a915c7a6c6c9f7cd99fdb1f413ef1b690">setAuthor</a>(<span class="keywordtype">string</span> a) { author = a; }</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classbookType.html#aad84954d17f38a532a4e0e3b97a0d28b">  144</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#aad84954d17f38a532a4e0e3b97a0d28b">setPub</a>(<span class="keywordtype">string</span> p) { publisher = p; }</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classbookType.html#ae718302af6e210c3903f690f00ce3c64">  150</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#ae718302af6e210c3903f690f00ce3c64">setDateAdded</a>(<span class="keywordtype">string</span> d) { dateAdded = d; }</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classbookType.html#a8c810f408b18b53747ecdadd7c60d369">  156</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a8c810f408b18b53747ecdadd7c60d369">setQtyOnHand</a>(<span class="keywordtype">int</span> q) { qtyOnHand = q; }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classbookType.html#a3c76218f56420e13e0c50823d83f86eb">  162</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a3c76218f56420e13e0c50823d83f86eb">setWholesale</a>(<span class="keywordtype">float</span> w) { wholesale = w; }</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classbookType.html#a3dfce137ba48dfeb2bcd26896ef3cc06">  168</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a3dfce137ba48dfeb2bcd26896ef3cc06">setRetail</a>(<span class="keywordtype">float</span> r) { retail = r; }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classbookType.html#a8dfd16d014222c5a3038961f8581ce7b">  173</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a8dfd16d014222c5a3038961f8581ce7b">incBookCount</a>();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="classbookType.html#af951a0d9068fa7204d61fbdb957927b3">  178</a></span>        <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#af951a0d9068fa7204d61fbdb957927b3">decBookCount</a>();</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="classbookType.html#a8cacb0534a6ad6e1019878825b1db392">  183</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#a8cacb0534a6ad6e1019878825b1db392">print</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classbookType.html#acadf6f43bc6738a97731fe726ec02582">  188</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classbookType.html#acadf6f43bc6738a97731fe726ec02582">bookInfo</a>();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classbookType.html#a39811e1dd22c24e91734955b3731ef2d">  195</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classbookType.html#a39811e1dd22c24e91734955b3731ef2d">equals</a>(<a class="code hl_class" href="classbookType.html">bookType</a> other);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>};</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassbookType_html"><div class="ttname"><a href="classbookType.html">bookType</a></div><div class="ttdoc">Represents a book in the inventory system.</div><div class="ttdef"><b>Definition:</b> bookType.h:25</div></div>
+<div class="ttc" id="aclassbookType_html_a0075a549ad9b4a866befbddbcb18dd22"><div class="ttname"><a href="classbookType.html#a0075a549ad9b4a866befbddbcb18dd22">bookType::getPub</a></div><div class="ttdeci">string getPub() const</div><div class="ttdoc">Gets publisher name.</div><div class="ttdef"><b>Definition:</b> bookType.h:89</div></div>
+<div class="ttc" id="aclassbookType_html_a2bd297763f452fea4eb34165ba07ee45"><div class="ttname"><a href="classbookType.html#a2bd297763f452fea4eb34165ba07ee45">bookType::getAuthor</a></div><div class="ttdeci">string getAuthor() const</div><div class="ttdoc">Gets author name.</div><div class="ttdef"><b>Definition:</b> bookType.h:83</div></div>
+<div class="ttc" id="aclassbookType_html_a39811e1dd22c24e91734955b3731ef2d"><div class="ttname"><a href="classbookType.html#a39811e1dd22c24e91734955b3731ef2d">bookType::equals</a></div><div class="ttdeci">bool equals(bookType other)</div><div class="ttdoc">Compares this book with another.</div></div>
+<div class="ttc" id="aclassbookType_html_a3ab823e557dda13d3ca28405b37a22c2"><div class="ttname"><a href="classbookType.html#a3ab823e557dda13d3ca28405b37a22c2">bookType::setTitle</a></div><div class="ttdeci">void setTitle(string t)</div><div class="ttdoc">Sets book title.</div><div class="ttdef"><b>Definition:</b> bookType.h:126</div></div>
+<div class="ttc" id="aclassbookType_html_a3c76218f56420e13e0c50823d83f86eb"><div class="ttname"><a href="classbookType.html#a3c76218f56420e13e0c50823d83f86eb">bookType::setWholesale</a></div><div class="ttdeci">void setWholesale(float w)</div><div class="ttdoc">Sets wholesale price.</div><div class="ttdef"><b>Definition:</b> bookType.h:162</div></div>
+<div class="ttc" id="aclassbookType_html_a3dfce137ba48dfeb2bcd26896ef3cc06"><div class="ttname"><a href="classbookType.html#a3dfce137ba48dfeb2bcd26896ef3cc06">bookType::setRetail</a></div><div class="ttdeci">void setRetail(float r)</div><div class="ttdoc">Sets retail price.</div><div class="ttdef"><b>Definition:</b> bookType.h:168</div></div>
+<div class="ttc" id="aclassbookType_html_a418a977aeae25030260f7e7f74fc8146"><div class="ttname"><a href="classbookType.html#a418a977aeae25030260f7e7f74fc8146">bookType::getISBN</a></div><div class="ttdeci">string getISBN() const</div><div class="ttdoc">Gets ISBN number.</div><div class="ttdef"><b>Definition:</b> bookType.h:77</div></div>
+<div class="ttc" id="aclassbookType_html_a5e5f3991d5b55addec958aa92ae45930"><div class="ttname"><a href="classbookType.html#a5e5f3991d5b55addec958aa92ae45930">bookType::getRetail</a></div><div class="ttdeci">float getRetail() const</div><div class="ttdoc">Gets retail price.</div><div class="ttdef"><b>Definition:</b> bookType.h:113</div></div>
+<div class="ttc" id="aclassbookType_html_a62cfda8a7367738b1957464433d3d966"><div class="ttname"><a href="classbookType.html#a62cfda8a7367738b1957464433d3d966">bookType::bookType</a></div><div class="ttdeci">bookType(string bookTitle, string isbn, string author, string publisher, string dateAdded, int qtyOnHand, float wholesale, float retail)</div><div class="ttdoc">Parameterized constructor.</div><div class="ttdef"><b>Definition:</b> bookType.h:54</div></div>
+<div class="ttc" id="aclassbookType_html_a6b8b0b2a1c7ae327bfef6ad9fef187ad"><div class="ttname"><a href="classbookType.html#a6b8b0b2a1c7ae327bfef6ad9fef187ad">bookType::bookType</a></div><div class="ttdeci">bookType()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> bookType.h:41</div></div>
+<div class="ttc" id="aclassbookType_html_a8c810f408b18b53747ecdadd7c60d369"><div class="ttname"><a href="classbookType.html#a8c810f408b18b53747ecdadd7c60d369">bookType::setQtyOnHand</a></div><div class="ttdeci">void setQtyOnHand(int q)</div><div class="ttdoc">Sets quantity in inventory.</div><div class="ttdef"><b>Definition:</b> bookType.h:156</div></div>
+<div class="ttc" id="aclassbookType_html_a8cacb0534a6ad6e1019878825b1db392"><div class="ttname"><a href="classbookType.html#a8cacb0534a6ad6e1019878825b1db392">bookType::print</a></div><div class="ttdeci">void print()</div><div class="ttdoc">Prints basic book information.</div></div>
+<div class="ttc" id="aclassbookType_html_a8dfd16d014222c5a3038961f8581ce7b"><div class="ttname"><a href="classbookType.html#a8dfd16d014222c5a3038961f8581ce7b">bookType::incBookCount</a></div><div class="ttdeci">static void incBookCount()</div><div class="ttdoc">Increments the static book count.</div></div>
+<div class="ttc" id="aclassbookType_html_a915c7a6c6c9f7cd99fdb1f413ef1b690"><div class="ttname"><a href="classbookType.html#a915c7a6c6c9f7cd99fdb1f413ef1b690">bookType::setAuthor</a></div><div class="ttdeci">void setAuthor(string a)</div><div class="ttdoc">Sets author name.</div><div class="ttdef"><b>Definition:</b> bookType.h:138</div></div>
+<div class="ttc" id="aclassbookType_html_a944a4e2a15191870ee0055fb94420e29"><div class="ttname"><a href="classbookType.html#a944a4e2a15191870ee0055fb94420e29">bookType::getWholesale</a></div><div class="ttdeci">float getWholesale() const</div><div class="ttdoc">Gets wholesale price.</div><div class="ttdef"><b>Definition:</b> bookType.h:107</div></div>
+<div class="ttc" id="aclassbookType_html_aa1d83c3dc12e3c70a405447b2e9ae5d2"><div class="ttname"><a href="classbookType.html#aa1d83c3dc12e3c70a405447b2e9ae5d2">bookType::getBookCount</a></div><div class="ttdeci">int getBookCount() const</div><div class="ttdoc">Gets total count of books in inventory.</div><div class="ttdef"><b>Definition:</b> bookType.h:119</div></div>
+<div class="ttc" id="aclassbookType_html_aa3c0c3787fbb86d20d1d3d032b9f1e40"><div class="ttname"><a href="classbookType.html#aa3c0c3787fbb86d20d1d3d032b9f1e40">bookType::getTitle</a></div><div class="ttdeci">string getTitle() const</div><div class="ttdoc">Gets book title.</div><div class="ttdef"><b>Definition:</b> bookType.h:71</div></div>
+<div class="ttc" id="aclassbookType_html_aac9d4b92a3095ad0c222abeb40232e1a"><div class="ttname"><a href="classbookType.html#aac9d4b92a3095ad0c222abeb40232e1a">bookType::getDateAdded</a></div><div class="ttdeci">string getDateAdded() const</div><div class="ttdoc">Gets date added to inventory.</div><div class="ttdef"><b>Definition:</b> bookType.h:95</div></div>
+<div class="ttc" id="aclassbookType_html_aad84954d17f38a532a4e0e3b97a0d28b"><div class="ttname"><a href="classbookType.html#aad84954d17f38a532a4e0e3b97a0d28b">bookType::setPub</a></div><div class="ttdeci">void setPub(string p)</div><div class="ttdoc">Sets publisher name.</div><div class="ttdef"><b>Definition:</b> bookType.h:144</div></div>
+<div class="ttc" id="aclassbookType_html_acadf6f43bc6738a97731fe726ec02582"><div class="ttname"><a href="classbookType.html#acadf6f43bc6738a97731fe726ec02582">bookType::bookInfo</a></div><div class="ttdeci">void bookInfo()</div><div class="ttdoc">Displays detailed book information.</div></div>
+<div class="ttc" id="aclassbookType_html_ada23293030bf6bfa808ad9b1f264fd0a"><div class="ttname"><a href="classbookType.html#ada23293030bf6bfa808ad9b1f264fd0a">bookType::setISBN</a></div><div class="ttdeci">void setISBN(string i)</div><div class="ttdoc">Sets ISBN number.</div><div class="ttdef"><b>Definition:</b> bookType.h:132</div></div>
+<div class="ttc" id="aclassbookType_html_ae718302af6e210c3903f690f00ce3c64"><div class="ttname"><a href="classbookType.html#ae718302af6e210c3903f690f00ce3c64">bookType::setDateAdded</a></div><div class="ttdeci">void setDateAdded(string d)</div><div class="ttdoc">Sets date added to inventory.</div><div class="ttdef"><b>Definition:</b> bookType.h:150</div></div>
+<div class="ttc" id="aclassbookType_html_ae7ef6bcb789a258b962aa3e1f2f2d818"><div class="ttname"><a href="classbookType.html#ae7ef6bcb789a258b962aa3e1f2f2d818">bookType::getQtyOnHand</a></div><div class="ttdeci">int getQtyOnHand() const</div><div class="ttdoc">Gets current quantity in inventory.</div><div class="ttdef"><b>Definition:</b> bookType.h:101</div></div>
+<div class="ttc" id="aclassbookType_html_af951a0d9068fa7204d61fbdb957927b3"><div class="ttname"><a href="classbookType.html#af951a0d9068fa7204d61fbdb957927b3">bookType::decBookCount</a></div><div class="ttdeci">static void decBookCount()</div><div class="ttdoc">Decrements the static book count.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
