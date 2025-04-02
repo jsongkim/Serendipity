@@ -18,6 +18,8 @@ digraph "cashier.cpp"
   Node1 -> Node7 [color="steelblue1",style="solid"];
   Node7 [label="bookType.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookType_8h.html",tooltip="Book inventory item class."];
   Node7 -> Node2 [color="steelblue1",style="solid"];
+  Node7 -> Node3 [color="steelblue1",style="solid"];
+  Node7 -> Node4 [color="steelblue1",style="solid"];
   Node1 -> Node8 [color="steelblue1",style="solid"];
   Node8 [label="lookUpBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$lookUpBook_8h_source.html",tooltip=" "];
   Node1 -> Node9 [color="steelblue1",style="solid"];

@@ -14,4 +14,6 @@ digraph "bookInfo.cpp"
   Node1 -> Node5 [color="steelblue1",style="solid"];
   Node5 [label="bookType.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookType_8h.html",tooltip="Book inventory item class."];
   Node5 -> Node4 [color="steelblue1",style="solid"];
+  Node5 -> Node3 [color="steelblue1",style="solid"];
+  Node5 -> Node2 [color="steelblue1",style="solid"];
 }

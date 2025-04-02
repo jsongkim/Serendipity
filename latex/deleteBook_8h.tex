@@ -1,0 +1,95 @@
+\hypertarget{deleteBook_8h}{}\doxysection{delete\+Book.\+h File Reference}
+\label{deleteBook_8h}\index{deleteBook.h@{deleteBook.h}}
+
+
+Header for the book deletion module of Serendipity Booksellers.  
+
+
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+Include dependency graph for delete\+Book.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{deleteBook_8h_a4dad30a004f7462eb751d336d8054a0b}{delete\+Book}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int count)
+\begin{DoxyCompactList}\small\item\em Deletes a book from the inventory system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header for the book deletion module of Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{deleteBook_8h_a4dad30a004f7462eb751d336d8054a0b}\label{deleteBook_8h_a4dad30a004f7462eb751d336d8054a0b}} 
+\index{deleteBook.h@{deleteBook.h}!deleteBook@{deleteBook}}
+\index{deleteBook@{deleteBook}!deleteBook.h@{deleteBook.h}}
+\doxysubsubsection{\texorpdfstring{deleteBook()}{deleteBook()}}
+{\footnotesize\ttfamily int delete\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Deletes a book from the inventory system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the current inventory \\
+\hline
+{\em count} & Current number of books in the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Updated book count after deletion
+\end{DoxyReturn}
+This function provides the interface for\+:
+\begin{DoxyItemize}
+\item Searching and selecting books to delete
+\item Confirming deletion actions
+\item Maintaining inventory integrity after deletion
+\item Handling multiple deletions in a single session
+\end{DoxyItemize}
+
+The function features\+:
+\begin{DoxyItemize}
+\item Interactive user prompts
+\item Input validation
+\item Visual confirmation of book details
+\item Proper array management when removing elements
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+This function modifies the inventory array in-\/place and updates the static book count in the \mbox{\hyperlink{classbookType}{book\+Type}} class.
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Deleting books is irreversible. Ensure proper user confirmation is received before processing deletions.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbookType}{book\+Type}}, look\+Up\+Book(), \mbox{\hyperlink{bookInfo_8cpp_ab00df8a86ee3f4279c593c28794729aa}{book\+Info()}}
+\end{DoxySeeAlso}
+Deletes a book from the inventory system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em count} & Current number of books in inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated count of books after deletion
+\end{DoxyReturn}
+This function provides an interactive interface for\+:
+\begin{DoxyItemize}
+\item Searching for books to delete
+\item Confirming deletion choices
+\item Removing books from inventory
+\item Maintaining inventory integrity
+\end{DoxyItemize}
+
+The function handles\+:
+\begin{DoxyItemize}
+\item User confirmation prompts
+\item Input validation
+\item Proper array management when deleting items
+\item Multiple deletions in one session 
+\end{DoxyItemize}

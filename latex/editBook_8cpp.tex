@@ -1,0 +1,74 @@
+\hypertarget{editBook_8cpp}{}\doxysection{edit\+Book.\+cpp File Reference}
+\label{editBook_8cpp}\index{editBook.cpp@{editBook.cpp}}
+
+
+Implementation of the book editing module for Serendipity Booksellers.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}look\+Up\+Book.\+h\char`\"{}}\newline
+Include dependency graph for edit\+Book.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{editBook_8cpp_aa90a42c1bba1427877383861f524d7fc}{edit\+Book}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int count)
+\begin{DoxyCompactList}\small\item\em Modifies book information in the inventory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the book editing module for Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{editBook_8cpp_aa90a42c1bba1427877383861f524d7fc}\label{editBook_8cpp_aa90a42c1bba1427877383861f524d7fc}} 
+\index{editBook.cpp@{editBook.cpp}!editBook@{editBook}}
+\index{editBook@{editBook}!editBook.cpp@{editBook.cpp}}
+\doxysubsubsection{\texorpdfstring{editBook()}{editBook()}}
+{\footnotesize\ttfamily int edit\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Modifies book information in the inventory. 
+
+Edits an existing book record in the provided array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em count} & Current number of books in inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Updated count of books after editing
+\end{DoxyReturn}
+This function provides an interactive interface for\+:
+\begin{DoxyItemize}
+\item Searching and selecting books to edit
+\item Modifying individual book attributes
+\item Validating user input
+\item Saving changes back to inventory
+\end{DoxyItemize}
+
+The function features\+:
+\begin{DoxyItemize}
+\item Menu-\/driven attribute modification
+\item Temporary storage of changes before commit
+\item Input validation for numeric fields
+\item Visual confirmation of current values
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The function uses temporary variables to store edits until explicitly saved 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Changes are only saved when option 9 is selected 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbookType}{book\+Type}}, look\+Up\+Book() 
+\end{DoxySeeAlso}

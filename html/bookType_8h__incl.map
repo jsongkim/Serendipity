@@ -1,4 +1,6 @@
 <map id="bookType.h" name="bookType.h">
-<area shape="rect" id="node1" title="Book inventory item class." alt="" coords="5,5,94,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="23,80,76,107"/>
+<area shape="rect" id="node1" title="Book inventory item class." alt="" coords="72,5,160,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,59,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="83,80,149,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="174,80,245,107"/>
 </map>

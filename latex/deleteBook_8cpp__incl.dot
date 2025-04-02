@@ -14,6 +14,8 @@ digraph "deleteBook.cpp"
   Node1 -> Node5 [color="steelblue1",style="solid"];
   Node5 [label="bookType.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookType_8h.html",tooltip="Book inventory item class."];
   Node5 -> Node4 [color="steelblue1",style="solid"];
+  Node5 -> Node3 [color="steelblue1",style="solid"];
+  Node5 -> Node2 [color="steelblue1",style="solid"];
   Node1 -> Node6 [color="steelblue1",style="solid"];
   Node6 [label="bookInfo.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookInfo_8h.html",tooltip="Header file for the book information display module."];
   Node6 -> Node5 [color="steelblue1",style="solid"];

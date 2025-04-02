@@ -1,0 +1,85 @@
+\hypertarget{editBook_8h}{}\doxysection{edit\+Book.\+h File Reference}
+\label{editBook_8h}\index{editBook.h@{editBook.h}}
+
+
+Header file for the book editing functionality.  
+
+
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+Include dependency graph for edit\+Book.\+h\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{editBook_8h_aa90a42c1bba1427877383861f524d7fc}{edit\+Book}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int count)
+\begin{DoxyCompactList}\small\item\em Edits an existing book record in the provided array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the book editing functionality. 
+
+This file contains the declaration of the function used to edit book records. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{editBook_8h_aa90a42c1bba1427877383861f524d7fc}\label{editBook_8h_aa90a42c1bba1427877383861f524d7fc}} 
+\index{editBook.h@{editBook.h}!editBook@{editBook}}
+\index{editBook@{editBook}!editBook.h@{editBook.h}}
+\doxysubsubsection{\texorpdfstring{editBook()}{editBook()}}
+{\footnotesize\ttfamily int edit\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Edits an existing book record in the provided array. 
+
+This function allows the user to modify the details of a book in the given array of book records. The user can select which book to edit and update its fields.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & An array of \mbox{\hyperlink{classbookType}{book\+Type}} structures containing book records. \\
+\hline
+{\em count} & The number of books currently stored in the array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the updated count of books (in case of any changes).
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The function may prompt the user for input to select and edit the book.
+\end{DoxyNote}
+Edits an existing book record in the provided array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em count} & Current number of books in inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Updated count of books after editing
+\end{DoxyReturn}
+This function provides an interactive interface for\+:
+\begin{DoxyItemize}
+\item Searching and selecting books to edit
+\item Modifying individual book attributes
+\item Validating user input
+\item Saving changes back to inventory
+\end{DoxyItemize}
+
+The function features\+:
+\begin{DoxyItemize}
+\item Menu-\/driven attribute modification
+\item Temporary storage of changes before commit
+\item Input validation for numeric fields
+\item Visual confirmation of current values
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The function uses temporary variables to store edits until explicitly saved 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Changes are only saved when option 9 is selected 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classbookType}{book\+Type}}, look\+Up\+Book() 
+\end{DoxySeeAlso}

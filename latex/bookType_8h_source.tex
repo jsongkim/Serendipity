@@ -6,81 +6,84 @@
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ BOOKTYPE\_H}}
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00057\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbookType}{bookType}}\ \{}
-\DoxyCodeLine{00058\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ bookTitle;\ \ \ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ isbn;\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ author;\ \ \ \ \ \ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ publisher;\ \ }
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dateAdded;\ \ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ qtyOnHand;\ \ \ \ \ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ wholesale;\ \ \ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ retail;\ \ \ \ \ \ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ bookCount;\ }
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbookType_a6b8b0b2a1c7ae327bfef6ad9fef187ad}{bookType}}()\ \{\}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbookType_a62cfda8a7367738b1957464433d3d966}{bookType}}(\textcolor{keywordtype}{string}\ bookTitle,\ \textcolor{keywordtype}{string}\ isbn,\ \textcolor{keywordtype}{string}\ author,\ \textcolor{keywordtype}{string}\ publisher,\ }
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dateAdded,\ \textcolor{keywordtype}{int}\ qtyOnHand,\ \textcolor{keywordtype}{float}\ wholesale,\ \textcolor{keywordtype}{float}\ retail)\ \{}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>bookTitle\ =\ bookTitle;}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>isbn\ =\ isbn;}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>author\ =\ author;}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>publisher\ =\ publisher;}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>dateAdded\ =\ dateAdded;}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>qtyOnHand\ =\ qtyOnHand;}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>wholesale\ =\ wholesale;}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>retail\ =\ retail;}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getter\ functions\ with\ Doxygen\ comments}}
-\DoxyCodeLine{00103\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}{getTitle}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bookTitle;\ \}}
-\DoxyCodeLine{00104\ }
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_a418a977aeae25030260f7e7f74fc8146}{getISBN}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ isbn;\ \}}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_a2bd297763f452fea4eb34165ba07ee45}{getAuthor}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ author;\ \}}
-\DoxyCodeLine{00116\ }
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_a0075a549ad9b4a866befbddbcb18dd22}{getPub}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ publisher;\ \}}
-\DoxyCodeLine{00122\ }
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}{getDateAdded}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ dateAdded;\ \}}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}{getQtyOnHand}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ qtyOnHand;\ \}}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classbookType_a944a4e2a15191870ee0055fb94420e29}{getWholesale}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ wholesale;\ \}}
-\DoxyCodeLine{00140\ }
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classbookType_a5e5f3991d5b55addec958aa92ae45930}{getRetail}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ retail;\ \}}
-\DoxyCodeLine{00146\ }
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}{getBookCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bookCount;\ \}}
-\DoxyCodeLine{00152\ }
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setter\ functions\ with\ Doxygen\ comments}}
-\DoxyCodeLine{00158\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a3ab823e557dda13d3ca28405b37a22c2}{setTitle}}(\textcolor{keywordtype}{string}\ t)\ \{\ bookTitle\ =\ t;\ \}}
-\DoxyCodeLine{00159\ }
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}{setISBN}}(\textcolor{keywordtype}{string}\ i)\ \{\ isbn\ =\ i;\ \}}
-\DoxyCodeLine{00165\ }
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}{setAuthor}}(\textcolor{keywordtype}{string}\ a)\ \{\ author\ =\ a;\ \}}
-\DoxyCodeLine{00171\ }
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}{setPub}}(\textcolor{keywordtype}{string}\ p)\ \{\ publisher\ =\ p;\ \}}
-\DoxyCodeLine{00177\ }
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_ae718302af6e210c3903f690f00ce3c64}{setDateAdded}}(\textcolor{keywordtype}{string}\ d)\ \{\ dateAdded\ =\ d;\ \}}
-\DoxyCodeLine{00183\ }
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a8c810f408b18b53747ecdadd7c60d369}{setQtyOnHand}}(\textcolor{keywordtype}{int}\ q)\ \{\ qtyOnHand\ =\ q;\ \}}
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a3c76218f56420e13e0c50823d83f86eb}{setWholesale}}(\textcolor{keywordtype}{float}\ w)\ \{\ wholesale\ =\ w;\ \}}
-\DoxyCodeLine{00195\ }
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}{setRetail}}(\textcolor{keywordtype}{float}\ r)\ \{\ retail\ =\ r;\ \}}
-\DoxyCodeLine{00201\ }
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a8dfd16d014222c5a3038961f8581ce7b}{incBookCount}}();}
-\DoxyCodeLine{00206\ }
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_af951a0d9068fa7204d61fbdb957927b3}{decBookCount}}();}
-\DoxyCodeLine{00211\ }
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a8cacb0534a6ad6e1019878825b1db392}{print}}();}
-\DoxyCodeLine{00216\ }
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_acadf6f43bc6738a97731fe726ec02582}{bookInfo}}();}
-\DoxyCodeLine{00221\ }
-\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbookType_a39811e1dd22c24e91734955b3731ef2d}{equals}}(\mbox{\hyperlink{classbookType}{bookType}}\ other);}
-\DoxyCodeLine{00228\ \};}
-\DoxyCodeLine{00229\ }
-\DoxyCodeLine{00230\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00060\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classbookType}{bookType}}\ \{}
+\DoxyCodeLine{00061\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ bookTitle;\ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ isbn;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ author;\ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ publisher;\ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dateAdded;\ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ qtyOnHand;\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ wholesale;\ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ retail;\ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ bookCount;\ }
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbookType_a6b8b0b2a1c7ae327bfef6ad9fef187ad}{bookType}}()\ \{\}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classbookType_a62cfda8a7367738b1957464433d3d966}{bookType}}(\textcolor{keywordtype}{string}\ bookTitle,\ \textcolor{keywordtype}{string}\ isbn,\ \textcolor{keywordtype}{string}\ author,\ \textcolor{keywordtype}{string}\ publisher,\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dateAdded,\ \textcolor{keywordtype}{int}\ qtyOnHand,\ \textcolor{keywordtype}{float}\ wholesale,\ \textcolor{keywordtype}{float}\ retail)\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>bookTitle\ =\ bookTitle;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>isbn\ =\ isbn;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>author\ =\ author;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>publisher\ =\ publisher;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>dateAdded\ =\ dateAdded;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>qtyOnHand\ =\ qtyOnHand;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>wholesale\ =\ wholesale;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>retail\ =\ retail;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Getter\ functions\ with\ Doxygen\ comments}}
+\DoxyCodeLine{00106\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_aa3c0c3787fbb86d20d1d3d032b9f1e40}{getTitle}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bookTitle;\ \}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_a418a977aeae25030260f7e7f74fc8146}{getISBN}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ isbn;\ \}}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_a2bd297763f452fea4eb34165ba07ee45}{getAuthor}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ author;\ \}}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_a0075a549ad9b4a866befbddbcb18dd22}{getPub}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ publisher;\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{classbookType_aac9d4b92a3095ad0c222abeb40232e1a}{getDateAdded}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ dateAdded;\ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbookType_ae7ef6bcb789a258b962aa3e1f2f2d818}{getQtyOnHand}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ qtyOnHand;\ \}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classbookType_a944a4e2a15191870ee0055fb94420e29}{getWholesale}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ wholesale;\ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classbookType_a5e5f3991d5b55addec958aa92ae45930}{getRetail}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ retail;\ \}}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classbookType_aa1d83c3dc12e3c70a405447b2e9ae5d2}{getBookCount}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ bookCount;\ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Setter\ functions\ with\ Doxygen\ comments}}
+\DoxyCodeLine{00161\ \textcolor{comment}{}\ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a3ab823e557dda13d3ca28405b37a22c2}{setTitle}}(\textcolor{keywordtype}{string}\ t)\ \{\ bookTitle\ =\ t;\ \}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_ada23293030bf6bfa808ad9b1f264fd0a}{setISBN}}(\textcolor{keywordtype}{string}\ i)\ \{\ isbn\ =\ i;\ \}}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a915c7a6c6c9f7cd99fdb1f413ef1b690}{setAuthor}}(\textcolor{keywordtype}{string}\ a)\ \{\ author\ =\ a;\ \}}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_aad84954d17f38a532a4e0e3b97a0d28b}{setPub}}(\textcolor{keywordtype}{string}\ p)\ \{\ publisher\ =\ p;\ \}}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_ae718302af6e210c3903f690f00ce3c64}{setDateAdded}}(\textcolor{keywordtype}{string}\ d)\ \{\ dateAdded\ =\ d;\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a8c810f408b18b53747ecdadd7c60d369}{setQtyOnHand}}(\textcolor{keywordtype}{int}\ q)\ \{\ qtyOnHand\ =\ q;\ \}}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a3c76218f56420e13e0c50823d83f86eb}{setWholesale}}(\textcolor{keywordtype}{float}\ w)\ \{\ wholesale\ =\ w;\ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a3dfce137ba48dfeb2bcd26896ef3cc06}{setRetail}}(\textcolor{keywordtype}{float}\ r)\ \{\ retail\ =\ r;\ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a8dfd16d014222c5a3038961f8581ce7b}{incBookCount}}();}
+\DoxyCodeLine{00209\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_af951a0d9068fa7204d61fbdb957927b3}{decBookCount}}();}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_a8cacb0534a6ad6e1019878825b1db392}{print}}();}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classbookType_acadf6f43bc6738a97731fe726ec02582}{bookInfo}}();}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classbookType_a39811e1dd22c24e91734955b3731ef2d}{equals}}(\mbox{\hyperlink{classbookType}{bookType}}\ other);}
+\DoxyCodeLine{00231\ \};}
+\DoxyCodeLine{00232\ }
+\DoxyCodeLine{00233\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
