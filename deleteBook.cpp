@@ -21,8 +21,6 @@ int deleteBook(bookType array[], int count)
         cout << "                                                                                \n";
         cout << "▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄\n\n";
 
-        cout << "Search:";
-
         do
         {
                 index = lookUpBook(array, count);
