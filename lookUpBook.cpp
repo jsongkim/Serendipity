@@ -13,7 +13,7 @@ int lookUpBook(bookType array[], int bookCount) {
     bool match = false;
     char choice = '\n';
 
-    cout << "Enter book title to search: ";
+    cout << "\n\nEnter book title to search: ";
     cin.ignore();
     getline(cin, title);
 
