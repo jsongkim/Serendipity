@@ -69,7 +69,6 @@ int deleteBook(bookType array[], int count) {
         if (choice == 'Y') {
             array[index] = array[(count - 1)];  // Replace with last element
             count = count - 1;                  // Decrement count
-            bookType::decBookCount();           // Update static counter
         }
 
         // Prompt for another deletion
