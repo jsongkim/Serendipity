@@ -153,7 +153,7 @@ int editBook(bookType array[], int count) {
                     if (cin.fail()) {
                         do {
                             cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                            cin.ignore();
                             cout << "Please enter a valid quantity: ";
                             cin >> tempQty;
                         } while (cin.fail());
@@ -167,7 +167,7 @@ int editBook(bookType array[], int count) {
                     if (cin.fail()) {
                         do {
                             cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                            cin.ignore();
                             cout << "Please enter a valid price: ";
                             cin >> tempWhole;
                         } while (cin.fail());
@@ -181,7 +181,7 @@ int editBook(bookType array[], int count) {
                     if (cin.fail()) {
                         do {
                             cin.clear();
-                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                            cin.ignore();
                             cout << "Please enter a valid price: ";
                             cin >> tempRetail;
                         } while (cin.fail());
