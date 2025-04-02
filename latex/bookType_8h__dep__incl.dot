@@ -1,0 +1,27 @@
+digraph "bookType.h"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="bookType.h",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Book inventory item class."];
+  Node1 -> Node2 [dir="back",color="steelblue1",style="solid"];
+  Node2 [label="addBook.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$addBook_8cpp.html",tooltip="Implementation of the book addition module for Serendipity Booksellers."];
+  Node1 -> Node3 [dir="back",color="steelblue1",style="solid"];
+  Node3 [label="bookInfo.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookInfo_8cpp.html",tooltip="Implementation of the book information display module for Serendipity Booksellers."];
+  Node1 -> Node4 [dir="back",color="steelblue1",style="solid"];
+  Node4 [label="bookInfo.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookInfo_8h.html",tooltip="Header file for the book information display module."];
+  Node4 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node5 [label="deleteBook.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$deleteBook_8cpp.html",tooltip="Implementation of the book deletion module for Serendipity Booksellers."];
+  Node1 -> Node6 [dir="back",color="steelblue1",style="solid"];
+  Node6 [label="cashier.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cashier_8cpp.html",tooltip="Implementation of the cashier module for Serendipity Booksellers."];
+  Node1 -> Node7 [dir="back",color="steelblue1",style="solid"];
+  Node7 [label="cashier.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$cashier_8h.html",tooltip="Header file for the cashier module of Serendipity Booksellers."];
+  Node1 -> Node5 [dir="back",color="steelblue1",style="solid"];
+  Node1 -> Node8 [dir="back",color="steelblue1",style="solid"];
+  Node8 [label="deleteBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$deleteBook_8h_source.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="steelblue1",style="solid"];
+  Node9 [label="editBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$editBook_8h_source.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="steelblue1",style="solid"];
+  Node10 [label="invmenu.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$invmenu_8h_source.html",tooltip=" "];
+}

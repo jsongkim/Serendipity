@@ -1,0 +1,8 @@
+digraph "bookType"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [shape=record,label="{bookType\n||+ bookType()\l+ bookType()\l+ getTitle()\l+ getISBN()\l+ getAuthor()\l+ getPub()\l+ getDateAdded()\l+ getQtyOnHand()\l+ getWholesale()\l+ getRetail()\land 12 more...\l+ incBookCount()\l+ decBookCount()\l}",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="Represents a book in the inventory system."];
+}
