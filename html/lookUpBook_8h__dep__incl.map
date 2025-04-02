@@ -1,0 +1,8 @@
+<map id="lookUpBook.h" name="lookUpBook.h">
+<area shape="rect" id="node1" title="Header for book lookup functionality." alt="" coords="186,5,289,32"/>
+<area shape="rect" id="node2" href="$cashier_8cpp.html" title="Implementation of the cashier module for Serendipity Booksellers." alt="" coords="5,80,94,107"/>
+<area shape="rect" id="node3" href="$deleteBook_8cpp.html" title="Implementation of the book deletion module for Serendipity Booksellers." alt="" coords="118,80,229,107"/>
+<area shape="rect" id="node4" href="$editBook_8cpp.html" title="Implementation of the book editing module for Serendipity Booksellers." alt="" coords="253,80,350,107"/>
+<area shape="rect" id="node5" href="$lookUpBook_8cpp.html" title="Implementation of book lookup functionality." alt="" coords="375,80,492,107"/>
+<area shape="rect" id="node6" href="$invmenu_8cpp.html" title="Implementation of the inventory menu for Serendipity Booksellers." alt="" coords="386,155,481,181"/>
+</map>

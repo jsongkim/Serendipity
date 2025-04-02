@@ -1,0 +1,54 @@
+\hypertarget{reports_8cpp}{}\doxysection{reports.\+cpp File Reference}
+\label{reports_8cpp}\index{reports.cpp@{reports.cpp}}
+
+
+Implementation of the reports menu for Serendipity Booksellers.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+Include dependency graph for reports.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{reports_8cpp_adcf41f9fa9c85c0e0eb4373ebfc5d3c0}{reports}} ()
+\begin{DoxyCompactList}\small\item\em Displays and manages the reports menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the reports menu for Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{reports_8cpp_adcf41f9fa9c85c0e0eb4373ebfc5d3c0}\label{reports_8cpp_adcf41f9fa9c85c0e0eb4373ebfc5d3c0}} 
+\index{reports.cpp@{reports.cpp}!reports@{reports}}
+\index{reports@{reports}!reports.cpp@{reports.cpp}}
+\doxysubsubsection{\texorpdfstring{reports()}{reports()}}
+{\footnotesize\ttfamily void reports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays and manages the reports menu. 
+
+This function provides a menu interface for generating various inventory reports including\+:
+\begin{DoxyItemize}
+\item Inventory listing
+\item Wholesale value report
+\item Retail value report
+\item Quantity-\/based listing
+\item Cost-\/based listing
+\item Age-\/based listing
+\end{DoxyItemize}
+
+The function handles user input validation and continues to display the menu until the user chooses to return to the main menu. Each menu option currently displays a placeholder message indicating the selected option.
+
+The menu features\+:
+\begin{DoxyItemize}
+\item ASCII-\/art border for visual appeal
+\item Input validation for menu choices
+\item Proper screen clearing between menu displays
+\item Consistent user feedback for selections 
+\end{DoxyItemize}

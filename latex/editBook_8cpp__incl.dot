@@ -17,5 +17,5 @@ digraph "editBook.cpp"
   Node5 -> Node3 [color="steelblue1",style="solid"];
   Node5 -> Node2 [color="steelblue1",style="solid"];
   Node1 -> Node6 [color="steelblue1",style="solid"];
-  Node6 [label="lookUpBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$lookUpBook_8h_source.html",tooltip=" "];
+  Node6 [label="lookUpBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$lookUpBook_8h.html",tooltip="Header for book lookup functionality."];
 }

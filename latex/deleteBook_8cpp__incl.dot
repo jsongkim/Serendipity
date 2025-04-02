@@ -20,5 +20,5 @@ digraph "deleteBook.cpp"
   Node6 [label="bookInfo.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$bookInfo_8h.html",tooltip="Header file for the book information display module."];
   Node6 -> Node5 [color="steelblue1",style="solid"];
   Node1 -> Node7 [color="steelblue1",style="solid"];
-  Node7 [label="lookUpBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$lookUpBook_8h_source.html",tooltip=" "];
+  Node7 [label="lookUpBook.h",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$lookUpBook_8h.html",tooltip="Header for book lookup functionality."];
 }

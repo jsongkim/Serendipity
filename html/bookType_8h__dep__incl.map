@@ -1,13 +1,14 @@
 <map id="bookType.h" name="bookType.h">
-<area shape="rect" id="node1" title="Book inventory item class." alt="" coords="456,5,545,32"/>
-<area shape="rect" id="node2" href="$addBook_8cpp.html" title="Implementation of the book addition module for Serendipity Booksellers." alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" href="$bookInfo_8cpp.html" title="Implementation of the book information display module for Serendipity Booksellers." alt="" coords="127,80,224,107"/>
-<area shape="rect" id="node4" href="$bookInfo_8h.html" title="Header file for the book information display module." alt="" coords="248,80,330,107"/>
-<area shape="rect" id="node5" href="$deleteBook_8cpp.html" title="Implementation of the book deletion module for Serendipity Booksellers." alt="" coords="272,155,383,181"/>
-<area shape="rect" id="node6" href="$cashier_8cpp.html" title="Implementation of the cashier module for Serendipity Booksellers." alt="" coords="404,80,493,107"/>
-<area shape="rect" id="node7" href="$cashier_8h.html" title="Header file for the cashier module of Serendipity Booksellers." alt="" coords="517,80,591,107"/>
-<area shape="rect" id="node8" href="$deleteBook_8h.html" title="Header for the book deletion module of Serendipity Booksellers." alt="" coords="615,80,712,107"/>
-<area shape="rect" id="node9" href="$editBook_8cpp.html" title="Implementation of the book editing module for Serendipity Booksellers." alt="" coords="736,80,833,107"/>
-<area shape="rect" id="node10" href="$editBook_8h.html" title="Header file for the book editing functionality." alt="" coords="858,80,941,107"/>
-<area shape="rect" id="node11" href="$invmenu_8h_source.html" title=" " alt="" coords="965,80,1047,107"/>
+<area shape="rect" id="node1" title="Book inventory item class." alt="" coords="528,5,616,32"/>
+<area shape="rect" id="node2" href="$addBook_8cpp.html" title="Implementation of the book addition module for Serendipity Booksellers." alt="" coords="233,80,330,107"/>
+<area shape="rect" id="node3" href="$invmenu_8cpp.html" title="Implementation of the inventory menu for Serendipity Booksellers." alt="" coords="234,155,329,181"/>
+<area shape="rect" id="node4" href="$bookInfo_8cpp.html" title="Implementation of the book information display module for Serendipity Booksellers." alt="" coords="112,80,208,107"/>
+<area shape="rect" id="node5" href="$bookInfo_8h.html" title="Header file for the book information display module." alt="" coords="911,80,994,107"/>
+<area shape="rect" id="node6" href="$deleteBook_8cpp.html" title="Implementation of the book deletion module for Serendipity Booksellers." alt="" coords="797,155,908,181"/>
+<area shape="rect" id="node7" href="$cashier_8cpp.html" title="Implementation of the cashier module for Serendipity Booksellers." alt="" coords="528,80,616,107"/>
+<area shape="rect" id="node8" href="$cashier_8h.html" title="Header file for the cashier module of Serendipity Booksellers." alt="" coords="640,80,715,107"/>
+<area shape="rect" id="node9" href="$deleteBook_8h.html" title="Header for the book deletion module of Serendipity Booksellers." alt="" coords="406,80,504,107"/>
+<area shape="rect" id="node10" href="$editBook_8cpp.html" title="Implementation of the book editing module for Serendipity Booksellers." alt="" coords="790,80,888,107"/>
+<area shape="rect" id="node11" href="$editBook_8h.html" title="Header file for the book editing functionality." alt="" coords="5,80,89,107"/>
+<area shape="rect" id="node12" href="$invmenu_8h.html" title="Header file for inventory menu functionality." alt="" coords="1017,80,1098,107"/>
 </map>

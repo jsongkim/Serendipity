@@ -1,0 +1,60 @@
+\hypertarget{invmenu_8cpp}{}\doxysection{invmenu.\+cpp File Reference}
+\label{invmenu_8cpp}\index{invmenu.cpp@{invmenu.cpp}}
+
+
+Implementation of the inventory menu for Serendipity Booksellers.  
+
+
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}add\+Book.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}look\+Up\+Book.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}book\+Info.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}delete\+Book.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}edit\+Book.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for invmenu.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{invmenu_8cpp_ac17c77b66bbfdbe8394e3d3f0b7d136a}{invmenu}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int book\+Count)
+\begin{DoxyCompactList}\small\item\em Displays and manages the inventory menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the inventory menu for Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{invmenu_8cpp_ac17c77b66bbfdbe8394e3d3f0b7d136a}\label{invmenu_8cpp_ac17c77b66bbfdbe8394e3d3f0b7d136a}} 
+\index{invmenu.cpp@{invmenu.cpp}!invmenu@{invmenu}}
+\index{invmenu@{invmenu}!invmenu.cpp@{invmenu.cpp}}
+\doxysubsubsection{\texorpdfstring{invmenu()}{invmenu()}}
+{\footnotesize\ttfamily int invmenu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{book\+Count }\end{DoxyParamCaption})}
+
+
+
+Displays and manages the inventory menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em book\+Count} & Current number of books in the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Updated count of books in the inventory
+\end{DoxyReturn}
+This function provides a menu interface for inventory management including\+:
+\begin{DoxyItemize}
+\item Looking up books
+\item Adding new books
+\item Editing existing books
+\item Deleting books
+\item Returning to the main menu
+\end{DoxyItemize}
+
+The function handles user input validation and calls appropriate functions for each inventory operation. It continues to display the menu until the user chooses to return to the main menu. 
