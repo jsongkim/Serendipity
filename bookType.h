@@ -7,6 +7,9 @@
 #define BOOKTYPE_H
 
 #include <string>
+#include <iomanip>
+#include <iostream>
+using namespace std;
 
 /**
  * @class bookType
