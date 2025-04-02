@@ -72,7 +72,7 @@ int main() {
                 cout << "Press ENTER to continue..." << endl;
                 cin.ignore();
                 cin.get();
-                reports();
+                reports(array);
                 break;
         case '4':
                 break;
