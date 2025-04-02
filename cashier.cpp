@@ -60,9 +60,6 @@ int cashier(bookType array[], int bookCount) {
         cout << "\nWhat book will you be purchasing today?" << endl;
         int index = lookUpBook(array, bookCount);
         if (index == -1) {
-            cout << "Book not found. Press ENTER to continue" << endl;
-            cin.ignore();
-            cin.get();
             break;
         }
 
