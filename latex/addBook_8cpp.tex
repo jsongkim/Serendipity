@@ -1,0 +1,93 @@
+\hypertarget{addBook_8cpp}{}\doxysection{add\+Book.\+cpp File Reference}
+\label{addBook_8cpp}\index{addBook.cpp@{addBook.cpp}}
+
+
+Implementation of the book addition module for Serendipity Booksellers.  
+
+
+{\ttfamily \#include \char`\"{}book\+Type.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{addBook_8cpp_a8c266f6d5173e9109d5171292c9a5a8a}{add\+Book}} (\mbox{\hyperlink{classbookType}{book\+Type}} array\mbox{[}$\,$\mbox{]}, int count)
+\begin{DoxyCompactList}\small\item\em Adds a new book to the inventory database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the book addition module for Serendipity Booksellers. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{addBook_8cpp_a8c266f6d5173e9109d5171292c9a5a8a}\label{addBook_8cpp_a8c266f6d5173e9109d5171292c9a5a8a}} 
+\index{addBook.cpp@{addBook.cpp}!addBook@{addBook}}
+\index{addBook@{addBook}!addBook.cpp@{addBook.cpp}}
+\doxysubsubsection{\texorpdfstring{addBook()}{addBook()}}
+{\footnotesize\ttfamily int add\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbookType}{book\+Type}}}]{array\mbox{[}$\,$\mbox{]},  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Adds a new book to the inventory database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array of \mbox{\hyperlink{classbookType}{book\+Type}} objects representing the inventory \\
+\hline
+{\em count} & Current number of books in the inventory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated count of books in inventory after addition
+\end{DoxyReturn}
+This function provides an interactive menu for\+:
+\begin{DoxyItemize}
+\item Entering all book details (title, ISBN, author, etc.)
+\item Validating numeric inputs
+\item Saving the book to inventory when complete
+\item Returning to previous menu
+\end{DoxyItemize}
+
+The function maintains a temporary copy of all fields until the user chooses to save the book to the database. Temporary variables to store book data before saving
+
+\texorpdfstring{$<$}{<} Menu choice input
+
+\texorpdfstring{$<$}{<} Temporary storage for book title
+
+\texorpdfstring{$<$}{<} Temporary storage for ISBN
+
+\texorpdfstring{$<$}{<} Temporary storage for author name
+
+\texorpdfstring{$<$}{<} Temporary storage for publisher
+
+\texorpdfstring{$<$}{<} Temporary storage for date added
+
+\texorpdfstring{$<$}{<} Temporary storage for quantity on hand
+
+\texorpdfstring{$<$}{<} Temporary storage for wholesale price
+
+\texorpdfstring{$<$}{<} Temporary storage for retail price
+
+\texorpdfstring{$<$}{<} Enter book title
+
+\texorpdfstring{$<$}{<} Enter ISBN
+
+\texorpdfstring{$<$}{<} Enter author
+
+\texorpdfstring{$<$}{<} Enter publisher
+
+\texorpdfstring{$<$}{<} Enter date added
+
+\texorpdfstring{$<$}{<} Enter quantity with validation
+
+\texorpdfstring{$<$}{<} Enter wholesale price with validation
+
+\texorpdfstring{$<$}{<} Enter retail price with validation
+
+\texorpdfstring{$<$}{<} Save book to database
+
+\texorpdfstring{$<$}{<} Return to inventory menu
+
+\texorpdfstring{$<$}{<} Handle invalid menu choices

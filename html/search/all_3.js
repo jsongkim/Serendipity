@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serenidipity_0',['Serenidipity',['../md_README.html',1,'']]]
+  ['my_20library_20manual_0',['My Library Manual',['../index.html',1,'']]]
 ];
