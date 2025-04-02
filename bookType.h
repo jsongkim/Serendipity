@@ -1,26 +1,58 @@
 /**
  * @file bookType.h
- * @brief Header file for the bookType class that represents book inventory items
+ * @brief Book inventory item class
  */
 
 #ifndef BOOKTYPE_H
 #define BOOKTYPE_H
 
-#include <iostream>
 #include <string>
-#include <iomanip>
-using namespace std;
 
 /**
  * @class bookType
  * @brief Represents a book in the inventory system
- *
- * @details This class stores all information about a book including:
- * - Title, ISBN, author, and publisher
- * - Date added to inventory
- * - Quantity on hand
- * - Wholesale and retail prices
- * - Static count of total books
+ * 
+ * @dot
+ * digraph bookType {
+ *   node [shape=record, fontname=Helvetica, fontsize=10];
+ *   bookType [label="{
+ *     bookType|
+ *     - bookTitle : string\l
+ *     - isbn : string\l
+ *     - author : string\l
+ *     - publisher : string\l
+ *     - dateAdded : string\l
+ *     - qtyOnHand : int\l
+ *     - wholesale : float\l
+ *     - retail : float\l
+ *     - bookCount : static int\l|
+ *     + bookType()\l
+ *     + bookType(string,string,string,string,string,int,float,float)\l
+ *     + getTitle() : string\l
+ *     + getISBN() : string\l
+ *     + getAuthor() : string\l
+ *     + getPub() : string\l
+ *     + getDateAdded() : string\l
+ *     + getQtyOnHand() : int\l
+ *     + getWholesale() : float\l
+ *     + getRetail() : float\l
+ *     + getBookCount() : int\l
+ *     + setTitle(string) : void\l
+ *     + setISBN(string) : void\l
+ *     + setAuthor(string) : void\l
+ *     + setPub(string) : void\l
+ *     + setDateAdded(string) : void\l
+ *     + setQtyOnHand(int) : void\l
+ *     + setWholesale(float) : void\l
+ *     + setRetail(float) : void\l
+ *     + incBookCount() : static void\l
+ *     + decBookCount() : static void\l
+ *     + print() : void\l
+ *     + bookInfo() : void\l
+ *     + equals(bookType) : bool\l
+ *   }"];
+ * }
+ * @enddot
  */
 class bookType {
 private:
